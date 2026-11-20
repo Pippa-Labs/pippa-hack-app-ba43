@@ -12,6 +12,7 @@ actually reads.
 
 from __future__ import annotations
 
+import functools
 import json
 import time
 import urllib.error
@@ -93,7 +94,11 @@ def run_call(app, outcome: str, inputs: dict, *, now=None, explicit=False):
     `Context` is not part of the real SDK. Every call in this suite goes
     through here, so the suite depends on nothing the real SDK lacks.
     """
-    return LocalRunner(app).call(outcome, dict(inputs), granted_secrets={},
+    # Pippa sends the fields it extracted and omits the rest; it never sends
+    # an explicit null, and the runtime refuses one against a `string`. So a
+    # None here means "not extracted", and is left out rather than sent.
+    present = {k: v for k, v in inputs.items() if v is not None}
+    return LocalRunner(app).call(outcome, present, granted_secrets={},
                                  now=now, request_id="test-1",
                                  explicit=explicit).result
 
@@ -130,6 +135,57 @@ def leg_journey(minutes: int, pence: int | None, mode: str,
     return journey
 
 
+
+@functools.lru_cache(maxsize=1)
+def manifest_doc() -> dict:
+    """`manifest.yaml`, parsed straight from the file.
+
+    Not through `app.manifest`. The real SDK's `Manifest` is an object with
+    attributes; the local stand-in made it a dict subclass, so the suite did
+    `app.manifest["outcomes"]` and `app.manifest.get("app_secrets")` happily
+    here and then collected eight failures in their build:
+
+        TypeError: 'Manifest' object is not subscriptable
+        AttributeError: 'Manifest' object has no attribute 'get'
+
+    The file is the source of truth anyway — it is what their reviewer reads
+    and what the runtime validates against — so reading it directly is both
+    more honest and immune to whatever shape the SDK wraps it in.
+    """
+    import yaml
+    return yaml.safe_load((Path(__file__).parent / "manifest.yaml").read_text())
+
+
+def declared_outcome(outcome_id: str) -> dict:
+    """One outcome's block from manifest.yaml."""
+    found = next((o for o in manifest_doc()["outcomes"]
+                  if o["id"] == outcome_id), None)
+    assert found, f"manifest.yaml declares no outcome {outcome_id!r}"
+    return found
+
+
+
+def raw_call(outcome: str, inputs: dict, *, now=None, explicit=False):
+    """A call object handed straight to `handle`, around the runtime's gate.
+
+    The runtime validates `call.inputs` against the manifest before the app
+    is called, so an app never really sees a string where it declared a
+    boolean, nor an undeclared key. `LocalRunner` enforces that too, which is
+    correct and which makes it the wrong tool for testing the app's own
+    defences against those inputs.
+
+    Those defences are worth keeping — the manifest can change, and a cast
+    that silently reads "no" as yes is the kind of bug that costs somebody a
+    fare — but they have to be tested at the level they act on, not through a
+    door that is locked against them.
+    """
+    return SimpleNamespace(
+        outcome_id=outcome, inputs=dict(inputs),
+        context=SimpleNamespace(
+            now=now or datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc),
+            explicit=explicit, request_id="raw"))
+
+
 @pytest.fixture
 def app():
     return App()
@@ -141,8 +197,8 @@ def app():
 
 def test_returns_exactly_the_declared_fields(app):
     result = ask(route(app))
-    declared = {f["name"] for f in app.manifest.outcome("journey.cost")["output"]}
-    optional = {f["name"] for f in app.manifest.outcome("journey.cost")["output"]
+    declared = {f["name"] for f in declared_outcome("journey.cost")["output"]}
+    optional = {f["name"] for f in declared_outcome("journey.cost")["output"]
                 if f.get("required") is False}
     assert set(result.data) - declared == set(), "returned an undeclared field"
     assert declared - optional - set(result.data) == set(), "missing a required field"
@@ -561,7 +617,7 @@ def test_network_facts_are_read_not_written(app):
 
 def test_the_aside_is_optional_in_the_contract(app):
     """It is declared `required: false`, so an answer without one is valid."""
-    field = next(f for f in app.manifest.outcome("journey.cost")["output"]
+    field = next(f for f in declared_outcome("journey.cost")["output"]
                  if f["name"] == "did_you_know")
     assert field["required"] is False
 
@@ -689,7 +745,7 @@ def test_the_key_is_read_inside_the_call_not_at_import():
 def test_the_key_is_declared_and_optional(app):
     """Declared under app_secrets so it can be set in Pippa without a push,
     and `required: false` because the app answers perfectly well unkeyed."""
-    declared = app.manifest.get("app_secrets") or []
+    declared = manifest_doc().get("app_secrets") or []
     entry = next((e for e in declared if e["name"] == "TFL_APP_KEY"), None)
     assert entry is not None, "TFL_APP_KEY not declared"
     assert entry.get("required") is False
@@ -700,8 +756,8 @@ def test_app_secrets_is_not_the_forbidden_secrets_block(app):
     """`secrets:` asks for a user's credential and is refused at registration.
     `app_secrets:` is the app's own key. They are different keys and only one
     of them is allowed."""
-    assert not app.manifest.get("secrets")
-    assert not app.manifest.get("connectors")
+    assert not manifest_doc().get("secrets")
+    assert not manifest_doc().get("connectors")
 
 
 def test_the_url_carries_the_key_only_when_there_is_one(app, monkeypatch):
@@ -770,7 +826,7 @@ def test_the_second_outcome_needs_no_network(app):
 
 
 def test_both_outcomes_are_declared_with_distinct_phrases(app):
-    outcomes = app.manifest["outcomes"]
+    outcomes = manifest_doc()["outcomes"]
     assert len(outcomes) == 2
     STOP = {"i", "a", "an", "the", "to", "is", "it", "do", "does", "my", "of",
             "from", "have", "got", "way", "and", "how", "what", "whats", "this",
@@ -1190,7 +1246,7 @@ def test_the_manifest_describes_what_the_code_does(app):
     that has drifted from behaviour is the one kind of error that costs
     something. walk_metres prefers the published figure; it said straight-line
     for a while after the code changed."""
-    field = next(f for f in app.manifest.outcome("interchange.check")["output"]
+    field = next(f for f in declared_outcome("interchange.check")["output"]
                  if f["name"] == "walk_metres")
     text = field["description"]
     assert "published" in text, "walk_metres prefers TfL's published distance"
@@ -1207,7 +1263,7 @@ def test_the_manifest_declares_no_owner_email_and_no_publisher(app):
     platform — it blocks the push, at the one moment there is no time to
     debug it. Guarded here because the field was in this manifest for three
     days and every document told you to fill it in."""
-    raw = dict(app.manifest)
+    raw = dict(manifest_doc())
     assert "owner_email" not in raw, "an email address here blocks the commit"
     assert "publisher" not in raw, "removed with owner_email; the badge now reads app_author_name"
     assert set(raw) == {"manifest_version", "persistence", "app_author_name",
@@ -1218,7 +1274,7 @@ def test_the_manifest_declares_no_owner_email_and_no_publisher(app):
 def test_the_only_fields_left_to_fill_in_are_the_two(app):
     """The documents promise exactly two. If a third placeholder appears the
     day plan is wrong, and the plan is read under time pressure."""
-    raw = dict(app.manifest)
+    raw = dict(manifest_doc())
     placeholders = [k for k, v in raw.items() if isinstance(v, str) and v.startswith("XXX")]
     placeholders += ["app.id"] if str(raw["app"].get("id", "")).startswith("XXX") else []
     # conftest substitutes them for the test run, so either none are left
@@ -1244,7 +1300,7 @@ def _fixed_fetch(app):
 
 @pytest.mark.parametrize("sent", [False, "no", "No", "NO", "false", "FALSE",
                                   "off", "none", "", 0])
-def test_a_negative_step_free_input_does_not_turn_step_free_on(app, sent):
+def test_a_negative_step_free_value_does_not_turn_step_free_on(sent):
     """`step_free` is declared a boolean, but models answer boolean fields
     with words all the time — and `bool("no")` is True in Python, so the
     plain cast turned the flag ON for somebody who said they did not need it.
@@ -1253,19 +1309,30 @@ def test_a_negative_step_free_input_does_not_turn_step_free_on(app, sent):
     is one minute by tube and has no step-free tube route at all, so the flag
     set backwards replaces a one-minute train with a twenty-two minute walk,
     and nothing in the reply reveals the mistake."""
-    seen = _fixed_fetch(app)
-    result = ask_access(app, step_free=sent)
-    assert "step_free" not in result.data, f"{sent!r} was read as yes"
-    assert not any("accessibilityPreference" in u for u in seen), f"{sent!r} was read as yes"
+    from app import truthy
+    assert truthy(sent) is False, f"{sent!r} was read as yes"
 
 
 @pytest.mark.parametrize("sent", [True, "yes", "Yes", "true", 1, "step free"])
-def test_an_affirmative_step_free_input_still_works(app, sent):
+def test_an_affirmative_step_free_value_still_reads_as_yes(sent):
     """The other half: narrowing the cast must not break the real thing."""
+    from app import truthy
+    assert truthy(sent) is True, f"{sent!r} was not read as yes"
+
+
+def test_step_free_reaches_the_planner_when_it_is_asked_for(app):
+    """And the integration, with the only value the runtime can deliver: a
+    real boolean. The declared type is `boolean`, and the runtime refuses
+    anything else before the app is called."""
     seen = _fixed_fetch(app)
-    result = ask_access(app, step_free=sent)
-    assert result.data.get("step_free") is True, f"{sent!r} was not read as yes"
-    assert any("accessibilityPreference" in u for u in seen), f"{sent!r} was not read as yes"
+    result = ask_access(app, step_free=True)
+    assert result.data.get("step_free") is True
+    assert any("accessibilityPreference" in u for u in seen)
+
+    seen.clear()
+    result = ask_access(app, step_free=False)
+    assert "step_free" not in result.data
+    assert not any("accessibilityPreference" in u for u in seen)
 
 
 @pytest.mark.parametrize("described,expected", [
@@ -3168,7 +3235,7 @@ def test_the_harness_routes_a_question_to_the_right_outcome(app, question, expec
     journey": the app answering correctly, shown as a failure, on the one
     question the demo is built around."""
     harness = _harness()
-    routing = harness.would_route(question, dict(app.manifest))
+    routing = harness.would_route(question, manifest_doc())
     assert routing["outcome"] == expected, (question, routing)
     assert routing["score"] > 0, routing
 
@@ -3181,7 +3248,7 @@ def test_the_harness_names_the_inputs_each_outcome_expects(app):
     assert harness.OUTCOME_FIELDS["journey.cost"] == ("from_station", "to_station")
     assert harness.OUTCOME_FIELDS["interchange.check"] == ("exit_station",
                                                            "entry_station")
-    for outcome in app.manifest["outcomes"]:
+    for outcome in manifest_doc()["outcomes"]:
         declared = tuple(i["name"] for i in outcome["inputs"][:2])
         assert harness.OUTCOME_FIELDS[outcome["id"]] == declared, outcome["id"]
 
@@ -3741,9 +3808,18 @@ def test_echoed_text_is_one_line(app):
 def test_an_outcome_with_no_branch_says_so(app):
     """Only reachable if the manifest declares an outcome the code has no
     branch for. 'Something went wrong' would tell nobody where to look."""
-    with pytest.raises(AgentAppError) as caught:
+    # Through the runtime this is unreachable: it refuses to route a call to
+    # an outcome the manifest does not declare, with a message of its own.
+    # Their build caught the suite asserting otherwise.
+    with pytest.raises(Exception) as refused:
         run_call(app, "something.else", {},
                  now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
+    assert "something.else" in str(refused.value)
+
+    # The app's own branch still has to say something useful, for the case
+    # the manifest declares an outcome the code has no branch for.
+    with pytest.raises(AgentAppError) as caught:
+        app.handle(raw_call("something.else", {}))
     assert "something.else" in caught.value.user_message
     assert caught.value.user_message != "Something went wrong."
 
@@ -3753,17 +3829,35 @@ def test_a_non_string_station_is_handled(app, junk):
     """`call.inputs` is filled by a model. A list or a number where a string
     belongs must not reach the lookup."""
     with pytest.raises(AgentAppError) as caught:
-        ask(route(app), frm=junk)
+        route(app).handle(raw_call("journey.cost",
+                                   {"from_station": junk,
+                                    "to_station": "Barbican"}))
     assert "starting station" in caught.value.user_message
 
 
 def test_an_undeclared_input_is_ignored(app):
-    """The runtime strips anything undeclared, but an app that fell over on a
-    stray key would fail for a reason nobody could see."""
-    result = run_call(route(app), "journey.cost",
-                      {"from_station": "Warren Street",
-                       "to_station": "Barbican", "nonsense": "x"},
-                      now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
+    """An undeclared key never reaches the app: the runtime refuses the call
+    outright rather than stripping the key and carrying on.
+
+    This test used to assert the opposite — that a stray key was ignored and
+    the answer came back anyway — which passed against a stand-in that did no
+    input checking and failed in their build. Worth keeping either way: the
+    app must not fall over on one, and the runtime's refusal is the contract
+    that makes that nearly unreachable."""
+    # Caught as Exception, not by class: the real SDK raises
+    # `pippa_agentapp_sdk.errors.InputShapeViolation`, and whether that is an
+    # AgentAppError over there is not something this machine can check.
+    with pytest.raises(Exception) as caught:
+        run_call(route(app), "journey.cost",
+                 {"from_station": "Warren Street",
+                  "to_station": "Barbican", "nonsense": "x"},
+                 now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
+    assert "nonsense" in str(caught.value)
+
+    # and reaching the app anyway, around the gate, it is simply ignored
+    result = route(app).handle(raw_call(
+        "journey.cost", {"from_station": "Warren Street",
+                         "to_station": "Barbican", "nonsense": "x"}))
     assert result.data["options"]
     assert "nonsense" not in result.data
 
