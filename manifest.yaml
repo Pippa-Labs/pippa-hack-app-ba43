@@ -47,17 +47,23 @@ app:
   # is parsed from "[via <name> <version> by <publisher>]" and splits on the
   # first "by", which would corrupt the attribution long after a green build.
   summary: >-
-    Tells you whether walking between two London stations costs a second fare,
-    and every way to travel between them with its fare in pence. A line goes
-    down, you walk to the next station and tap in again, and you have paid for
-    two journeys. Transport for London lets you make some of those walks free,
-    but the list is no longer on their website and no journey planner shows
-    it. This app has it: whether a walk is free, how far apart the stations
-    are, and how many minutes you have to cross. Ask about a journey and it
-    lists the ways to make it, across tube, rail, bus, walking and cycling,
-    each with its fare and whether its line is delayed right now. It also
-    warns, without being asked, when a station near your route would cost a
-    second fare.
+    Built for commuters and tourists on the Transport for London network,
+    this tells you whether walking between two stations costs a second fare,
+    and every way to travel between them with its fare in pence.
+
+    A line goes down, you walk to the next station and tap in again, and you
+    have paid for two journeys. Transport for London lets you make some of
+    those walks free, but the list is no longer on their website and no
+    journey planner shows it.
+
+    Ask "will i be charged twice if i walk from Warren Street to Euston
+    Square" and it tells you the walk is free, that the two stations are
+    about 220 metres apart, and that you have 20 minutes to cross.
+
+    Ask about a journey instead and it lists the ways to make it, across
+    tube, rail, bus, walking and cycling, each with its fare and whether its
+    line is delayed right now. It also warns, without being asked, when a
+    station near your route would cost a second fare.
 
 # ── The app's own API keys ───────────────────────────────────────────────────
 #
