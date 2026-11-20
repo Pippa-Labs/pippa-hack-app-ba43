@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import time
 import urllib.error
+from types import SimpleNamespace
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -22,7 +23,7 @@ from pathlib import Path
 import pytest
 
 from app import (App, DEADLINE_SECONDS, TIMEOUT, norm, pounds)
-from pippa_agentapp_sdk import AgentAppError
+from pippa_agentapp_sdk import AgentAppError, LocalRunner
 
 LONDON_TZ = ZoneInfo("Europe/London")
 
@@ -76,13 +77,31 @@ def route(app: App, status=ALL_GOOD, journeys=WARREN_BARBICAN):
     return app
 
 
+def run_call(app, outcome: str, inputs: dict, *, now=None, explicit=False):
+    """Call the app the way the production runtime does.
+
+    Through `LocalRunner`, which their SDK describes as "the same code the
+    production runtime uses to call your app" — so a Result that violates the
+    manifest fails here exactly as it would in production.
+
+    Not by building `Call(outcome, inputs, Context(now=...))` by hand. That
+    worked against the local stand-in for weeks and then died at import in
+    their build:
+
+        ImportError: cannot import name 'Context' from 'pippa_agentapp_sdk'
+
+    `Context` is not part of the real SDK. Every call in this suite goes
+    through here, so the suite depends on nothing the real SDK lacks.
+    """
+    return LocalRunner(app).call(outcome, dict(inputs), granted_secrets={},
+                                 now=now, request_id="test-1",
+                                 explicit=explicit).result
+
+
 def ask(app: App, frm="Warren Street", to="Barbican", when=None):
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
     moment = when or datetime(2026, 11, 17, 14, 0, tzinfo=timezone.utc)  # Tue, off-peak
-    return app.handle(Call("journey.cost",
-                           {"from_station": frm, "to_station": to},
-                           Context(now=moment)))
+    return run_call(app, "journey.cost",
+                    {"from_station": frm, "to_station": to}, now=moment)
 
 
 
@@ -228,11 +247,12 @@ def test_prefix_match_only_when_unambiguous(app):
 
 def test_peak_and_off_peak_come_from_the_supplied_clock(app):
     """call.context.now, never datetime.now() — so this still passes in March."""
-    from pippa_agentapp_sdk import Call, Context
     tuesday_peak = datetime(2026, 11, 17, 8, 0, tzinfo=timezone.utc)
     tuesday_off = datetime(2026, 11, 17, 14, 0, tzinfo=timezone.utc)
     saturday = datetime(2026, 11, 21, 8, 0, tzinfo=timezone.utc)
-    mk = lambda when: Call("journey.cost", {}, Context(now=when))
+    # `_is_peak` reads only `call.context.now`, so it is handed exactly
+    # that — and no `Context`, which the real SDK does not export.
+    mk = lambda when: SimpleNamespace(context=SimpleNamespace(now=when))
     assert app._is_peak(mk(tuesday_peak)) is True
     assert app._is_peak(mk(tuesday_off)) is False
     assert app._is_peak(mk(saturday)) is False, "weekends are never peak"
@@ -702,12 +722,9 @@ def test_the_url_carries_the_key_only_when_there_is_one(app, monkeypatch):
 # ---------------------------------------------------------------------------
 
 def ask_interchange(app, frm, to, when=None):
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("interchange.check")
     moment = when or datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc)
-    return app.handle(Call("interchange.check",
-                           {"exit_station": frm, "entry_station": to},
-                           Context(now=moment)))
+    return run_call(app, "interchange.check",
+                    {"exit_station": frm, "entry_station": to}, now=moment)
 
 
 def test_a_designated_pair_is_one_journey(app):
@@ -859,13 +876,11 @@ def test_a_failed_dock_lookup_does_not_lose_the_answer(app):
 # ---------------------------------------------------------------------------
 
 def ask_access(app, frm="Oxford Circus", to="Warren Street", step_free=None):
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
     inputs = {"from_station": frm, "to_station": to}
     if step_free is not None:
         inputs["step_free"] = step_free
-    return app.handle(Call("journey.cost", inputs,
-                           Context(now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))))
+    return run_call(app, "journey.cost", inputs,
+                    now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
 
 
 def test_step_free_is_only_applied_when_asked_for(app):
@@ -1295,12 +1310,9 @@ def _peak_app(app):
 
 
 def _ask_at(app, when):
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
-    return app.handle(Call("journey.cost",
-                           {"from_station": "Heathrow Terminal 5",
-                            "to_station": "Covent Garden"},
-                           Context(now=when)))
+    return run_call(app, "journey.cost",
+                    {"from_station": "Heathrow Terminal 5",
+                     "to_station": "Covent Garden"}, now=when)
 
 
 @pytest.mark.parametrize("when,fires", [
@@ -1332,14 +1344,11 @@ def test_peak_tip_copes_with_a_station_that_has_no_zone(app):
     zoneless = [v["name"] for v in app._stations.values() if not v.get("zone")]
     assert zoneless, "every station now has a zone — has the data changed?"
 
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
     peak = datetime(2026, 11, 23, 9, 10, tzinfo=LONDON_TZ)
     for name in zoneless[:12]:
-        result = app.handle(Call("journey.cost",
-                                 {"from_station": name,
-                                  "to_station": "Warren Street"},
-                                 Context(now=peak)))
+        result = run_call(app, "journey.cost",
+                          {"from_station": name,
+                           "to_station": "Warren Street"}, now=peak)
         # no crash, and nothing invented about a fare it cannot price
         assert "peak_tip" not in result.data, (name, result.data.get("peak_tip"))
 
@@ -1350,13 +1359,10 @@ def test_peak_tip_stays_quiet_when_there_is_nothing_in_it(app):
     minutes to save ten pence" is it contradicting its own arithmetic in the
     same reply — £4.62 of somebody's time for £0.10."""
     _peak_app(app)
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
-    result = app.handle(Call("journey.cost",
-                             {"from_station": "Warren Street",
-                              "to_station": "Barbican"},
-                             Context(now=datetime(2026, 11, 23, 9, 10,
-                                                  tzinfo=LONDON_TZ))))
+    result = run_call(app, "journey.cost",
+                      {"from_station": "Warren Street",
+                       "to_station": "Barbican"},
+                      now=datetime(2026, 11, 23, 9, 10, tzinfo=LONDON_TZ))
     assert "peak_tip" not in result.data, result.data.get("peak_tip")
 
 
@@ -1420,14 +1426,12 @@ def test_no_single_aside_dominates_the_answers(app):
     of journeys carried one of the same three lines and anybody trying three
     routes saw a repeat — which is exactly what a judge does."""
     import random as _random
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
 
     def fetch(url, timeout=5.0):
         if "/Line/Mode/tube/Status" in url:
             return json.dumps(ALL_GOOD).encode()
         return json.dumps(WARREN_BARBICAN).encode()
     app._fetch = fetch
-    set_active_outcome("journey.cost")
 
     names = [r["name"] for r in
              {r["naptan"]: r for r in app._stations.values()}.values()]
@@ -1438,9 +1442,9 @@ def test_no_single_aside_dominates_the_answers(app):
     for _ in range(600):
         a, b = rng.sample(names, 2)
         try:
-            data = app.handle(Call("journey.cost",
-                                   {"from_station": a, "to_station": b},
-                                   Context(now=when))).data
+            data = run_call(app, "journey.cost",
+                            {"from_station": a, "to_station": b},
+                            now=when).data
         except AgentAppError:
             continue
         runs += 1
@@ -1877,6 +1881,61 @@ def test_no_route_is_only_said_when_both_queries_have_run(app):
     assert any("useMultiModalCall" in u for u in seen), seen
 
 
+
+#: Every name the real `pippa_agentapp_sdk` is known to export, taken from
+#: Pippa Labs' own example app and its tests — the only authoritative sample
+#: of the real SDK available on a laptop, since the package itself is
+#: installed only inside their build.
+REAL_SDK_NAMES = frozenset({
+    "AgentAppError", "Call", "Manifest", "Result",
+    "load_manifest_file", "validate_manifest",     # their app.py imports these
+    "LocalRunner", "OutputShapeViolation",         # their test_app.py these
+})
+
+
+def test_nothing_imports_a_name_the_real_sdk_has_not_got():
+    """The local stand-in is wider than the real SDK, and that is dangerous.
+
+    `Context` and `set_active_outcome` exist here and do not exist there. The
+    suite used both, passed completely on this machine, and then died at
+    import in their build:
+
+        ImportError: cannot import name 'Context' from 'pippa_agentapp_sdk'
+
+    Nothing local could have caught it, because the thing doing the checking
+    was the thing that was wrong. A stand-in with extra surface is worse than
+    none: the extra surface is invisible until the real one refuses it, and
+    by then the failure is in a build log rather than a test run.
+
+    So the files that ship are held to the real SDK's vocabulary, and the
+    stand-in may keep its extras for the local harness as long as nothing
+    deployed reaches for them.
+    """
+    import ast
+    for filename in ("app.py", "test_app.py"):
+        path = Path(__file__).parent / filename
+        tree = ast.parse(path.read_text())
+        imported = {alias.name
+                    for node in ast.walk(tree)
+                    if isinstance(node, ast.ImportFrom)
+                    and node.module == "pippa_agentapp_sdk"
+                    for alias in node.names}
+        unknown = imported - REAL_SDK_NAMES
+        assert not unknown, (
+            f"{filename} imports {sorted(unknown)} from pippa_agentapp_sdk, "
+            f"which the real SDK does not export — it will fail at import in "
+            f"the build. Known names: {sorted(REAL_SDK_NAMES)}")
+
+
+def test_the_stand_in_provides_everything_the_real_sdk_does():
+    """The other direction. If the stand-in is missing something the real SDK
+    exports, a test written against the real API fails locally for a reason
+    that has nothing to do with the app."""
+    import pippa_agentapp_sdk as sdk
+    missing = sorted(n for n in REAL_SDK_NAMES if not hasattr(sdk, n))
+    assert not missing, f"the local stand-in has no {missing}"
+
+
 def test_live_disruption_reaches_both_the_option_and_the_sentence(app):
     """"It reads the disruption itself rather than being told" is the claim,
     and it is carried by two small branches: one marks the option, the other
@@ -2295,7 +2354,6 @@ def test_every_figure_describes_an_option_that_was_returned(app):
     20. True, and impossible for Pippa to explain, because it was never given
     the journey that figure referred to."""
     import re as _re
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
 
     names = ["circle", "district", "central", "northern", "victoria", "jubilee"]
     journeys = [{"duration": 20 + 3 * k, "fare": {"totalCost": 170},
@@ -2310,12 +2368,10 @@ def test_every_figure_describes_an_option_that_was_returned(app):
         return json.dumps({"journeys": journeys}).encode()
 
     app._fetch = fetch
-    set_active_outcome("journey.cost")
-    data = app.handle(Call("journey.cost",
-                           {"from_station": "Warren Street",
-                            "to_station": "Barbican"},
-                           Context(now=datetime(2026, 11, 20, 14, 30,
-                                                tzinfo=LONDON_TZ)))).data
+    data = run_call(app, "journey.cost",
+                    {"from_station": "Warren Street",
+                     "to_station": "Barbican"},
+                    now=datetime(2026, 11, 20, 14, 30, tzinfo=LONDON_TZ)).data
 
     shown = {int(m.group(1)) for line in data["options"]
              for m in [_re.search(r"(\d+) min", line)] if m}
@@ -2561,7 +2617,6 @@ def test_the_same_question_gives_the_same_answer(app):
             return json.dumps(ALL_GOOD).encode()
         return json.dumps(WARREN_BARBICAN).encode()
 
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
     when = datetime(2026, 11, 20, 14, 30, tzinfo=LONDON_TZ)
 
     for outcome, body in (
@@ -2569,12 +2624,11 @@ def test_the_same_question_gives_the_same_answer(app):
                               "to_station": "Barbican"}),
             ("interchange.check", {"exit_station": "Warren Street",
                                    "entry_station": "Euston Square"})):
-        set_active_outcome(outcome)
         seen = set()
         for _ in range(4):
             fresh = _App()               # a new copy, as the runtime does
             fresh._fetch = fetch
-            result = fresh.handle(Call(outcome, dict(body), Context(now=when)))
+            result = run_call(fresh, outcome, body, now=when)
             seen.add(json.dumps({"d": result.data, "n": result.narrative},
                                 sort_keys=True))
         assert len(seen) == 1, f"{outcome} gave {len(seen)} different answers"
@@ -2772,21 +2826,19 @@ def test_every_assumption_the_harness_makes_about_the_app_text(app):
         pytest.skip("harness is not deployed; nothing to cross-check")
     source = harness.read_text()
 
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
     when = datetime(2026, 11, 20, 14, 30, tzinfo=LONDON_TZ)
 
     # 1. the designated/not discriminator, on real pairs both ways
     m = _re.search(r'includes\("([^"]+)"\)', source)
     assert m, "the harness no longer discriminates on a phrase"
     needle = m.group(1)
-    set_active_outcome("interchange.check")
     for first, second in (("Warren Street", "Euston Square"),
                           ("Bank", "Monument"),
                           ("Marylebone", "Paddington"),
                           ("Warren Street", "Great Portland Street")):
-        reply = app.handle(Call("interchange.check",
-                                {"exit_station": first, "entry_station": second},
-                                Context(now=when)))
+        reply = run_call(app, "interchange.check",
+                         {"exit_station": first, "entry_station": second},
+                         now=when)
         seen = needle in (reply.narrative or "")
         assert seen is reply.data["designated"], (
             f"the harness reads {first}->{second} as "
@@ -2899,13 +2951,11 @@ def test_the_three_ways_a_fare_can_be_reported(app):
              "legs": [_leg("national-rail", [("sw", "South Western")])]}]}).encode()
 
     app._fetch = fetch_unpriced
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
-    unpriced = app.handle(Call("journey.cost",
-                               {"from_station": zoneless[0],
-                                "to_station": zoneless[1]},
-                               Context(now=datetime(2026, 11, 20, 14, 30,
-                                                    tzinfo=LONDON_TZ)))).data
+    unpriced = run_call(app, "journey.cost",
+                        {"from_station": zoneless[0],
+                         "to_station": zoneless[1]},
+                        now=datetime(2026, 11, 20, 14, 30,
+                                     tzinfo=LONDON_TZ)).data
     line = unpriced["options"][0]
     assert "fare not quoted" in line, line
     assert "no fare" not in line, f"an unpriced journey must not read as free: {line}"
@@ -3192,9 +3242,10 @@ def test_peak_is_a_london_clock_not_the_one_it_arrives_on(app):
     from late March to late October. In November the two coincide, which is
     why it would have gone unnoticed."""
     from zoneinfo import ZoneInfo
-    from pippa_agentapp_sdk import Call, Context
     london = ZoneInfo("Europe/London")
-    mk = lambda when: Call("journey.cost", {}, Context(now=when))
+    # `_is_peak` reads only `call.context.now`, so it is handed exactly
+    # that — and no `Context`, which the real SDK does not export.
+    mk = lambda when: SimpleNamespace(context=SimpleNamespace(now=when))
 
     # British Summer Time: UTC is an hour behind London
     assert app._is_peak(mk(datetime(2027, 7, 16, 5, 45, tzinfo=timezone.utc))) is True
@@ -3207,8 +3258,9 @@ def test_peak_is_a_london_clock_not_the_one_it_arrives_on(app):
 
 def test_winter_is_unaffected(app):
     """GMT and UTC coincide, so November behaves exactly as before."""
-    from pippa_agentapp_sdk import Call, Context
-    mk = lambda when: Call("journey.cost", {}, Context(now=when))
+    # `_is_peak` reads only `call.context.now`, so it is handed exactly
+    # that — and no `Context`, which the real SDK does not export.
+    mk = lambda when: SimpleNamespace(context=SimpleNamespace(now=when))
     assert app._is_peak(mk(datetime(2026, 11, 20, 8, 0, tzinfo=timezone.utc))) is True
     assert app._is_peak(mk(datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))) is False
 
@@ -3689,10 +3741,9 @@ def test_echoed_text_is_one_line(app):
 def test_an_outcome_with_no_branch_says_so(app):
     """Only reachable if the manifest declares an outcome the code has no
     branch for. 'Something went wrong' would tell nobody where to look."""
-    from pippa_agentapp_sdk import Call, Context
     with pytest.raises(AgentAppError) as caught:
-        app.handle(Call("something.else", {},
-                        Context(now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))))
+        run_call(app, "something.else", {},
+                 now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
     assert "something.else" in caught.value.user_message
     assert caught.value.user_message != "Something went wrong."
 
@@ -3709,11 +3760,10 @@ def test_a_non_string_station_is_handled(app, junk):
 def test_an_undeclared_input_is_ignored(app):
     """The runtime strips anything undeclared, but an app that fell over on a
     stray key would fail for a reason nobody could see."""
-    from pippa_agentapp_sdk import Call, Context, set_active_outcome
-    set_active_outcome("journey.cost")
-    result = route(app).handle(Call("journey.cost",
-        {"from_station": "Warren Street", "to_station": "Barbican", "nonsense": "x"},
-        Context(now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))))
+    result = run_call(route(app), "journey.cost",
+                      {"from_station": "Warren Street",
+                       "to_station": "Barbican", "nonsense": "x"},
+                      now=datetime(2026, 11, 20, 14, 0, tzinfo=timezone.utc))
     assert result.data["options"]
     assert "nonsense" not in result.data
 
