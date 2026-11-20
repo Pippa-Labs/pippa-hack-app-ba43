@@ -1,0 +1,5565 @@
+{
+ "gateline_osi": {
+  "bank": {
+   "between": "Central/Northern/DLR and Waterloo & City gatelines",
+   "minutes": 15,
+   "station": "Bank",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "blackfriars": {
+   "between": "Platforms 1 and 2-4 at the north end",
+   "minutes": 10,
+   "station": "Blackfriars",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "farringdon": {
+   "between": "Integrated ticket hall and other entrances",
+   "minutes": 10,
+   "station": "Farringdon",
+   "step_free_forced": false,
+   "type": "ALL"
+  },
+  "highbury and islington": {
+   "between": "West End exit from LO platforms and main entrance",
+   "minutes": 15,
+   "station": "Highbury & Islington",
+   "step_free_forced": false,
+   "type": "ALL"
+  },
+  "kings cross st pancras": {
+   "between": "Circle/Ham&City/Metropolitan, Northern, Piccadilly/Victoria",
+   "minutes": 15,
+   "station": "King's Cross St. Pancras",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "lewisham": {
+   "between": "Accessible route requires leaving and re-entering the paid area",
+   "minutes": 15,
+   "station": "Lewisham",
+   "step_free_forced": true,
+   "type": "NR"
+  },
+  "liverpool st": {
+   "between": "Platforms 1-10 and platforms 11-18",
+   "minutes": 30,
+   "station": "Liverpool Street",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "london br": {
+   "between": "Main concourse (lower) and upper concourse (platforms 10-15)",
+   "minutes": 30,
+   "station": "London Bridge",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "oxford circus": {
+   "between": "Argyll Street exit and main entrance",
+   "minutes": 10,
+   "station": "Oxford Circus",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "paddington": {
+   "between": "Platforms 15/16 and other LU gatelines",
+   "minutes": 20,
+   "station": "Paddington",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "richmond": {
+   "between": "Accessible route requires leaving and re-entering the paid area",
+   "minutes": 10,
+   "station": "Richmond",
+   "step_free_forced": true,
+   "type": "ALL"
+  },
+  "seven sisters": {
+   "between": "Seven Sisters Road and platform 2 secondary exit",
+   "minutes": 20,
+   "station": "Seven Sisters",
+   "step_free_forced": false,
+   "type": "ALL"
+  },
+  "st pancras": {
+   "between": "Platforms 1-4 and A-B",
+   "minutes": 30,
+   "station": "St. Pancras International",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "stevenage": {
+   "between": "Platforms 1-4 and 5",
+   "minutes": 20,
+   "station": "Stevenage",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "tottenham ct rd": {
+   "between": "Northern and Central gatelines",
+   "minutes": 10,
+   "station": "Tottenham Court Road",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "victoria": {
+   "between": "Southeastern platforms and Southern platforms",
+   "minutes": 30,
+   "station": "Victoria",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "waterloo": {
+   "between": "Bakerloo/Northern, Jubilee, Waterloo & City",
+   "minutes": 15,
+   "station": "Waterloo",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "welwyn garden city": {
+   "between": "Platforms 1-2 and 3-4",
+   "minutes": 15,
+   "station": "Welwyn Garden City",
+   "step_free_forced": false,
+   "type": "NR"
+  },
+  "west harrow": {
+   "between": "Eastbound and Westbound platforms",
+   "minutes": 5,
+   "station": "West Harrow",
+   "step_free_forced": false,
+   "type": "LU"
+  },
+  "woodford": {
+   "between": "Accessible route requires leaving and re-entering the paid area",
+   "minutes": 10,
+   "station": "Woodford",
+   "step_free_forced": true,
+   "type": "LU"
+  }
+ },
+ "generated": "2026-11-17",
+ "osi_pairs": {
+  "aldgate east|aldgate": {
+   "entry": "Aldgate",
+   "exit": "Aldgate East",
+   "metres": 280,
+   "minutes": 10,
+   "variants": [
+    "LU->LU 10min"
+   ]
+  },
+  "aldgate|aldgate east": {
+   "entry": "Aldgate East",
+   "exit": "Aldgate",
+   "metres": 280,
+   "minutes": 10,
+   "variants": [
+    "LU->LU 10min"
+   ]
+  },
+  "aldgate|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Aldgate",
+   "metres": 400,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "aldgate|tower gateway": {
+   "entry": "Tower Gateway",
+   "exit": "Aldgate",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "LU->DLR 20min"
+   ]
+  },
+  "archway|upper holloway": {
+   "entry": "Upper Holloway",
+   "exit": "Archway",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "baker st|marylebone": {
+   "entry": "Marylebone",
+   "exit": "Baker Street",
+   "metres": 550,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "balham|balham": {
+   "entry": "Balham",
+   "exit": "Balham",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "bank|cannon st": {
+   "entry": "Cannon Street",
+   "exit": "Bank",
+   "metres": 220,
+   "minutes": 15,
+   "variants": [
+    "LU->LU 15min",
+    "LU->NR 40min"
+   ]
+  },
+  "bank|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Bank",
+   "metres": 750,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "bank|liverpool st": {
+   "entry": "Liverpool Street",
+   "exit": "Bank",
+   "metres": 800,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "bank|monument": {
+   "entry": "Monument",
+   "exit": "Bank",
+   "metres": 210,
+   "minutes": 15,
+   "variants": [
+    "LU->LU 15min"
+   ]
+  },
+  "battersea pk|battersea power": {
+   "entry": "Battersea Power Station",
+   "exit": "Battersea Park",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "battersea power|battersea pk": {
+   "entry": "Battersea Park",
+   "exit": "Battersea Power Station",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "battersea power|queenstown rd": {
+   "entry": "Queenstown Road",
+   "exit": "Battersea Power Station",
+   "metres": 700,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "bayswater|queensway": {
+   "entry": "Queensway",
+   "exit": "Bayswater",
+   "metres": 210,
+   "minutes": 10,
+   "variants": [
+    "LU->LU 10min"
+   ]
+  },
+  "blackfriars|blackfriars": {
+   "entry": "Blackfriars",
+   "exit": "Blackfriars",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "blackfriars|southwark": {
+   "entry": "Southwark",
+   "exit": "Blackfriars",
+   "metres": 600,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "bond st|oxford circus": {
+   "entry": "Oxford Circus",
+   "exit": "Bond Street",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "bounds grn|bowes pk": {
+   "entry": "Bowes Park",
+   "exit": "Bounds Green",
+   "metres": 300,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "bow church|bow rd": {
+   "entry": "Bow Road",
+   "exit": "Bow Church",
+   "metres": 290,
+   "minutes": 15,
+   "variants": [
+    "DLR->LU 15min"
+   ]
+  },
+  "bow rd|bow church": {
+   "entry": "Bow Church",
+   "exit": "Bow Road",
+   "metres": 290,
+   "minutes": 15,
+   "variants": [
+    "LU->DLR 15min"
+   ]
+  },
+  "bowes pk|bounds grn": {
+   "entry": "Bounds Green",
+   "exit": "Bowes Park",
+   "metres": 300,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "brixton|brixton": {
+   "entry": "Brixton",
+   "exit": "Brixton",
+   "metres": 150,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "bromley north|bromley south": {
+   "entry": "Bromley South",
+   "exit": "Bromley North",
+   "metres": 1000,
+   "minutes": 30,
+   "variants": [
+    "NR->NR 30min"
+   ]
+  },
+  "bromley south|bromley north": {
+   "entry": "Bromley North",
+   "exit": "Bromley South",
+   "metres": 1000,
+   "minutes": 30,
+   "variants": [
+    "NR->NR 30min"
+   ]
+  },
+  "brondesbury|kilburn": {
+   "entry": "Kilburn",
+   "exit": "Brondesbury",
+   "metres": 240,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "camden rd|camden town": {
+   "entry": "Camden Town",
+   "exit": "Camden Road",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "camden town|camden rd": {
+   "entry": "Camden Road",
+   "exit": "Camden Town",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "canary wharf|canary wharf": {
+   "entry": "Canary Wharf",
+   "exit": "Canary Wharf",
+   "metres": 210,
+   "minutes": 20,
+   "variants": [
+    "DLR->LU 20min",
+    "DLR->NR 20min",
+    "LU->DLR 20min",
+    "LU->NR 20min",
+    "NR->DLR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "canary wharf|heron quays": {
+   "entry": "Heron Quays",
+   "exit": "Canary Wharf",
+   "metres": 150,
+   "minutes": 15,
+   "variants": [
+    "LU->DLR 15min"
+   ]
+  },
+  "canary wharf|poplar": {
+   "entry": "Poplar",
+   "exit": "Canary Wharf EL",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->DLR 20min"
+   ]
+  },
+  "canary wharf|west india quay": {
+   "entry": "West India Quay",
+   "exit": "Canary Wharf EL",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->DLR 20min"
+   ]
+  },
+  "cannon st|bank": {
+   "entry": "Bank",
+   "exit": "Cannon Street",
+   "metres": 220,
+   "minutes": 15,
+   "variants": [
+    "LU->LU 15min",
+    "NR->LU 20min"
+   ]
+  },
+  "cannon st|cannon st": {
+   "entry": "Cannon Street",
+   "exit": "Cannon Street",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "catford br|catford": {
+   "entry": "Catford",
+   "exit": "Catford Bridge",
+   "metres": 110,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "catford|catford br": {
+   "entry": "Catford Bridge",
+   "exit": "Catford",
+   "metres": 110,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "charing cross|charing cross": {
+   "entry": "Charing Cross",
+   "exit": "Charing Cross",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "charing cross|embankment": {
+   "entry": "Embankment",
+   "exit": "Charing Cross",
+   "metres": 140,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "clapham high st|clapham north": {
+   "entry": "Clapham North",
+   "exit": "Clapham High Street",
+   "metres": 170,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "clapham north|clapham high st": {
+   "entry": "Clapham High Street",
+   "exit": "Clapham North",
+   "metres": 170,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "clock house|kent house": {
+   "entry": "Kent House",
+   "exit": "Clock House",
+   "metres": 600,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "custom house|custom house": {
+   "entry": "Custom House EL",
+   "exit": "Custom House",
+   "metres": 0,
+   "minutes": 10,
+   "variants": [
+    "DLR->NR 10min",
+    "NR->DLR 10min"
+   ]
+  },
+  "dalston jn|dalston kingsland": {
+   "entry": "Dalston Kingsland",
+   "exit": "Dalston Junction",
+   "metres": 250,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "dalston kingsland|dalston jn": {
+   "entry": "Dalston Junction",
+   "exit": "Dalston Kingsland",
+   "metres": 250,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "east putney|putney": {
+   "entry": "Putney",
+   "exit": "East Putney",
+   "metres": 550,
+   "minutes": 30,
+   "variants": [
+    "LU->NR 30min"
+   ]
+  },
+  "edgware rd bak|edgware rd cdh": {
+   "entry": "Edgware Road CDH",
+   "exit": "Edgware Road Bak",
+   "metres": 200,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "edgware rd cdh|edgware rd bak": {
+   "entry": "Edgware Road Bak",
+   "exit": "Edgware Road CDH",
+   "metres": 200,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "edgware rd cdh|marylebone": {
+   "entry": "Marylebone",
+   "exit": "Edgware Road CDH",
+   "metres": 450,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "elephant and castle|elephant and castle": {
+   "entry": "Elephant & Castle",
+   "exit": "Elephant & Castle",
+   "metres": 290,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "embankment|charing cross": {
+   "entry": "Charing Cross",
+   "exit": "Embankment",
+   "metres": 140,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "embankment|waterloo": {
+   "entry": "Waterloo",
+   "exit": "Embankment",
+   "metres": 800,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "embankment|waterloo east": {
+   "entry": "Waterloo East",
+   "exit": "Embankment",
+   "metres": 1000,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "euston sq|euston": {
+   "entry": "Euston",
+   "exit": "Euston Square",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min",
+    "LU->NR 40min"
+   ]
+  },
+  "euston sq|warren st": {
+   "entry": "Warren Street",
+   "exit": "Euston Square",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "euston|euston": {
+   "entry": "Euston",
+   "exit": "Euston",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "euston|euston sq": {
+   "entry": "Euston Square",
+   "exit": "Euston",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "euston|kings cross": {
+   "entry": "King's Cross",
+   "exit": "Euston",
+   "metres": 1000,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "euston|st pancras": {
+   "entry": "St. Pancras International",
+   "exit": "Euston",
+   "metres": 800,
+   "minutes": 30,
+   "variants": [
+    "NR->NR 30min"
+   ]
+  },
+  "fenchurch st|aldgate": {
+   "entry": "Aldgate",
+   "exit": "Fenchurch Street",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "fenchurch st|bank": {
+   "entry": "Bank",
+   "exit": "Fenchurch Street",
+   "metres": 750,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "fenchurch st|liverpool st": {
+   "entry": "Liverpool Street",
+   "exit": "Fenchurch Street",
+   "metres": 900,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "fenchurch st|monument": {
+   "entry": "Monument",
+   "exit": "Fenchurch Street",
+   "metres": 650,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "fenchurch st|tower gateway": {
+   "entry": "Tower Gateway",
+   "exit": "Fenchurch Street",
+   "metres": 350,
+   "minutes": 20,
+   "variants": [
+    "NR->DLR 20min"
+   ]
+  },
+  "fenchurch st|tower hill": {
+   "entry": "Tower Hill",
+   "exit": "Fenchurch Street",
+   "metres": 130,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "finchley rd and frognal|finchley rd": {
+   "entry": "Finchley Road",
+   "exit": "Finchley Road & Frognal",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "finchley rd|finchley rd and frognal": {
+   "entry": "Finchley Road & Frognal",
+   "exit": "Finchley Road",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "finsbury pk|finsbury pk": {
+   "entry": "Finsbury Park",
+   "exit": "Finsbury Park",
+   "metres": 0,
+   "minutes": 10,
+   "variants": [
+    "LU->NR 10min",
+    "NR->LU 10min"
+   ]
+  },
+  "forest gate|wanstead pk": {
+   "entry": "Wanstead Park",
+   "exit": "Forest Gate",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "hackney central|hackney downs": {
+   "entry": "Hackney Downs",
+   "exit": "Hackney Central",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "hackney downs|hackney central": {
+   "entry": "Hackney Central",
+   "exit": "Hackney Downs",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "hammersmith cir h and c|hammersmith dis pic": {
+   "entry": "Hammersmith Dis/Pic",
+   "exit": "Hammersmith Cir/H&C",
+   "metres": 56,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "hammersmith dis pic|hammersmith cir h and c": {
+   "entry": "Hammersmith Cir/H&C",
+   "exit": "Hammersmith Dis/Pic",
+   "metres": 56,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "hanger lane|pk royal": {
+   "entry": "Park Royal",
+   "exit": "Hanger Lane",
+   "metres": 750,
+   "minutes": 25,
+   "variants": [
+    "LU->LU 25min"
+   ]
+  },
+  "harringay grn lanes|harringay": {
+   "entry": "Harringay",
+   "exit": "Harringay Green Lanes",
+   "metres": 550,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "harringay|harringay grn lanes": {
+   "entry": "Harringay Green Lanes",
+   "exit": "Harringay",
+   "metres": 550,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "heron quays|canary wharf": {
+   "entry": "Canary Wharf",
+   "exit": "Heron Quays",
+   "metres": 150,
+   "minutes": 15,
+   "variants": [
+    "DLR->LU 15min"
+   ]
+  },
+  "ickenham|west ruislip": {
+   "entry": "West Ruislip",
+   "exit": "Ickenham",
+   "metres": 1100,
+   "minutes": 30,
+   "variants": [
+    "LU->ALL 30min"
+   ]
+  },
+  "kent house|clock house": {
+   "entry": "Clock House",
+   "exit": "Kent House",
+   "metres": 600,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "kentish town west|kentish town": {
+   "entry": "Kentish Town",
+   "exit": "Kentish Town West",
+   "metres": 700,
+   "minutes": 20,
+   "variants": [
+    "NR->ALL 20min"
+   ]
+  },
+  "kentish town|kentish town west": {
+   "entry": "Kentish Town West",
+   "exit": "Kentish Town",
+   "metres": 700,
+   "minutes": 20,
+   "variants": [
+    "ALL->NR 20min"
+   ]
+  },
+  "kenton|northwick pk": {
+   "entry": "Northwick Park",
+   "exit": "Kenton",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "ALL->LU 20min"
+   ]
+  },
+  "kilburn|brondesbury": {
+   "entry": "Brondesbury",
+   "exit": "Kilburn",
+   "metres": 240,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "kings cross st pancras|kings cross": {
+   "entry": "King's Cross",
+   "exit": "King's Cross St. Pancras",
+   "metres": 0,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "kings cross st pancras|st pancras": {
+   "entry": "St. Pancras International",
+   "exit": "King's Cross St. Pancras",
+   "metres": 0,
+   "minutes": 30,
+   "variants": [
+    "LU->NR 30min"
+   ]
+  },
+  "kings cross|euston": {
+   "entry": "Euston",
+   "exit": "King's Cross",
+   "metres": 1000,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "kings cross|kings cross st pancras": {
+   "entry": "King's Cross St. Pancras",
+   "exit": "King's Cross",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "kings cross|st pancras": {
+   "entry": "St. Pancras International",
+   "exit": "King's Cross",
+   "metres": 77,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "lancaster gate|paddington": {
+   "entry": "Paddington",
+   "exit": "Lancaster Gate",
+   "metres": 600,
+   "minutes": 40,
+   "variants": [
+    "LU->NR/EL 40min"
+   ]
+  },
+  "lewisham|lewisham": {
+   "entry": "Lewisham",
+   "exit": "Lewisham",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "DLR->NR 20min",
+    "NR->DLR 20min"
+   ]
+  },
+  "leytonstone high rd|leytonstone": {
+   "entry": "Leytonstone",
+   "exit": "Leytonstone High Road",
+   "metres": 800,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "leytonstone|leytonstone high rd": {
+   "entry": "Leytonstone High Road",
+   "exit": "Leytonstone",
+   "metres": 800,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "limehouse|limehouse": {
+   "entry": "Limehouse",
+   "exit": "Limehouse",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "DLR->NR 20min",
+    "NR->DLR 20min"
+   ]
+  },
+  "liverpool st|bank": {
+   "entry": "Bank",
+   "exit": "Liverpool Street",
+   "metres": 800,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "liverpool st|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Liverpool Street",
+   "metres": 900,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "liverpool st|liverpool st": {
+   "entry": "Liverpool Street",
+   "exit": "Liverpool Street",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "liverpool st|moorgate": {
+   "entry": "Moorgate",
+   "exit": "Liverpool Street",
+   "metres": 550,
+   "minutes": 20,
+   "variants": [
+    "NR->ALL 20min"
+   ]
+  },
+  "london br|london br": {
+   "entry": "London Bridge",
+   "exit": "London Bridge",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "manor pk|woodgrange pk": {
+   "entry": "Woodgrange Park",
+   "exit": "Manor Park",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "marylebone|baker st": {
+   "entry": "Baker Street",
+   "exit": "Marylebone",
+   "metres": 550,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "marylebone|edgware rd cdh": {
+   "entry": "Edgware Road CDH",
+   "exit": "Marylebone",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "marylebone|marylebone": {
+   "entry": "Marylebone",
+   "exit": "Marylebone",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "marylebone|paddington": {
+   "entry": "Paddington",
+   "exit": "Marylebone",
+   "metres": 1300,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "monument|bank": {
+   "entry": "Bank",
+   "exit": "Monument",
+   "metres": 210,
+   "minutes": 15,
+   "variants": [
+    "LU->LU 15min"
+   ]
+  },
+  "monument|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Monument",
+   "metres": 650,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "moorgate|liverpool st": {
+   "entry": "Liverpool Street",
+   "exit": "Moorgate",
+   "metres": 550,
+   "minutes": 40,
+   "variants": [
+    "ALL->NR 40min"
+   ]
+  },
+  "new cross gate|new cross": {
+   "entry": "New Cross",
+   "exit": "New Cross Gate",
+   "metres": 700,
+   "minutes": 25,
+   "variants": [
+    "NR->NR 25min"
+   ]
+  },
+  "new cross|new cross gate": {
+   "entry": "New Cross Gate",
+   "exit": "New Cross",
+   "metres": 700,
+   "minutes": 25,
+   "variants": [
+    "NR->NR 25min"
+   ]
+  },
+  "northwick pk|kenton": {
+   "entry": "Kenton",
+   "exit": "Northwick Park",
+   "metres": 450,
+   "minutes": 20,
+   "variants": [
+    "LU->ALL 20min"
+   ]
+  },
+  "oxford circus|bond st": {
+   "entry": "Bond Street",
+   "exit": "Oxford Circus",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "paddington|lancaster gate": {
+   "entry": "Lancaster Gate",
+   "exit": "Paddington",
+   "metres": 600,
+   "minutes": 20,
+   "variants": [
+    "NR/EL->LU 20min"
+   ]
+  },
+  "paddington|marylebone": {
+   "entry": "Marylebone",
+   "exit": "Paddington",
+   "metres": 1300,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "paddington|paddington": {
+   "entry": "Paddington",
+   "exit": "Paddington",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "penge east|penge west": {
+   "entry": "Penge West",
+   "exit": "Penge East",
+   "metres": 650,
+   "minutes": 25,
+   "variants": [
+    "NR->NR 25min"
+   ]
+  },
+  "penge west|penge east": {
+   "entry": "Penge East",
+   "exit": "Penge West",
+   "metres": 650,
+   "minutes": 25,
+   "variants": [
+    "NR->NR 25min"
+   ]
+  },
+  "pk royal|hanger lane": {
+   "entry": "Hanger Lane",
+   "exit": "Park Royal",
+   "metres": 750,
+   "minutes": 25,
+   "variants": [
+    "LU->LU 25min"
+   ]
+  },
+  "poplar|canary wharf": {
+   "entry": "Canary Wharf EL",
+   "exit": "Poplar",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "DLR->NR 20min"
+   ]
+  },
+  "putney|east putney": {
+   "entry": "East Putney",
+   "exit": "Putney",
+   "metres": 550,
+   "minutes": 30,
+   "variants": [
+    "NR->LU 30min"
+   ]
+  },
+  "queenstown rd|battersea power": {
+   "entry": "Battersea Power Station",
+   "exit": "Queenstown Road",
+   "metres": 700,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "queensway|bayswater": {
+   "entry": "Bayswater",
+   "exit": "Queensway",
+   "metres": 210,
+   "minutes": 10,
+   "variants": [
+    "LU->LU 10min"
+   ]
+  },
+  "seven sisters|south tottenham": {
+   "entry": "South Tottenham",
+   "exit": "Seven Sisters",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "ALL->NR 20min"
+   ]
+  },
+  "shadwell|shadwell": {
+   "entry": "Shadwell",
+   "exit": "Shadwell",
+   "metres": 63,
+   "minutes": 15,
+   "variants": [
+    "DLR->NR 15min",
+    "NR->DLR 15min"
+   ]
+  },
+  "shepherds bush|shepherds bush": {
+   "entry": "Shepherd's Bush",
+   "exit": "Shepherd's Bush",
+   "metres": 2,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "south tottenham|seven sisters": {
+   "entry": "Seven Sisters",
+   "exit": "South Tottenham",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "NR->ALL 20min"
+   ]
+  },
+  "southend central|southend victoria": {
+   "entry": "Southend Victoria",
+   "exit": "Southend Central",
+   "metres": 650,
+   "minutes": 30,
+   "variants": [
+    "NR->NR 30min"
+   ]
+  },
+  "southend victoria|southend central": {
+   "entry": "Southend Central",
+   "exit": "Southend Victoria",
+   "metres": 650,
+   "minutes": 30,
+   "variants": [
+    "NR->NR 30min"
+   ]
+  },
+  "southwark|blackfriars": {
+   "entry": "Blackfriars",
+   "exit": "Southwark",
+   "metres": 600,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "southwark|waterloo east": {
+   "entry": "Waterloo East",
+   "exit": "Southwark",
+   "metres": 0,
+   "minutes": 10,
+   "variants": [
+    "LU->NR 10min"
+   ]
+  },
+  "st pancras|euston": {
+   "entry": "Euston",
+   "exit": "St. Pancras International",
+   "metres": 800,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "st pancras|kings cross": {
+   "entry": "King's Cross",
+   "exit": "St. Pancras International",
+   "metres": 77,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "st pancras|kings cross st pancras": {
+   "entry": "King's Cross St. Pancras",
+   "exit": "St. Pancras International",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "sudbury hill harrow|sudbury hill": {
+   "entry": "Sudbury Hill",
+   "exit": "Sudbury Hill, Harrow",
+   "metres": 180,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "sudbury hill|sudbury hill harrow": {
+   "entry": "Sudbury Hill, Harrow",
+   "exit": "Sudbury Hill",
+   "metres": 180,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "tottenham hale|tottenham hale": {
+   "entry": "Tottenham Hale",
+   "exit": "Tottenham Hale",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "tower gateway|aldgate": {
+   "entry": "Aldgate",
+   "exit": "Tower Gateway",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "DLR->LU 20min"
+   ]
+  },
+  "tower gateway|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Tower Gateway",
+   "metres": 350,
+   "minutes": 40,
+   "variants": [
+    "DLR->NR 40min"
+   ]
+  },
+  "tower gateway|tower hill": {
+   "entry": "Tower Hill",
+   "exit": "Tower Gateway",
+   "metres": 240,
+   "minutes": 15,
+   "variants": [
+    "DLR->LU 15min"
+   ]
+  },
+  "tower hill|fenchurch st": {
+   "entry": "Fenchurch Street",
+   "exit": "Tower Hill",
+   "metres": 130,
+   "minutes": 40,
+   "variants": [
+    "LU->NR 40min"
+   ]
+  },
+  "tower hill|tower gateway": {
+   "entry": "Tower Gateway",
+   "exit": "Tower Hill",
+   "metres": 240,
+   "minutes": 15,
+   "variants": [
+    "LU->DLR 15min"
+   ]
+  },
+  "upper holloway|archway": {
+   "entry": "Archway",
+   "exit": "Upper Holloway",
+   "metres": 400,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "upper warlingham|whyteleafe": {
+   "entry": "Whyteleafe",
+   "exit": "Upper Warlingham",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "vauxhall|vauxhall": {
+   "entry": "Vauxhall",
+   "exit": "Vauxhall",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "victoria|victoria": {
+   "entry": "Victoria",
+   "exit": "Victoria",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "walthamstow central|walthamstow central": {
+   "entry": "Walthamstow Central",
+   "exit": "Walthamstow Central",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min",
+    "NR->LU 20min"
+   ]
+  },
+  "walthamstow central|walthamstow queens rd": {
+   "entry": "Walthamstow Queen's Road",
+   "exit": "Walthamstow Central",
+   "metres": 350,
+   "minutes": 25,
+   "variants": [
+    "LU->NR 25min",
+    "NR->NR 25min"
+   ]
+  },
+  "walthamstow queens rd|walthamstow central": {
+   "entry": "Walthamstow Central",
+   "exit": "Walthamstow Queen's Road",
+   "metres": 350,
+   "minutes": 25,
+   "variants": [
+    "NR->LU 25min",
+    "NR->NR 25min"
+   ]
+  },
+  "wanstead pk|forest gate": {
+   "entry": "Forest Gate",
+   "exit": "Wanstead Park",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "warren st|euston sq": {
+   "entry": "Euston Square",
+   "exit": "Warren Street",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "waterloo east|embankment": {
+   "entry": "Embankment",
+   "exit": "Waterloo East",
+   "metres": 1000,
+   "minutes": 25,
+   "variants": [
+    "NR->LU 25min"
+   ]
+  },
+  "waterloo east|southwark": {
+   "entry": "Southwark",
+   "exit": "Waterloo East",
+   "metres": 0,
+   "minutes": 10,
+   "variants": [
+    "NR->LU 10min"
+   ]
+  },
+  "waterloo east|waterloo": {
+   "entry": "Waterloo",
+   "exit": "Waterloo East",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min",
+    "NR->NR 30min"
+   ]
+  },
+  "waterloo|embankment": {
+   "entry": "Embankment",
+   "exit": "Waterloo",
+   "metres": 800,
+   "minutes": 25,
+   "variants": [
+    "NR->LU 25min"
+   ]
+  },
+  "waterloo|waterloo": {
+   "entry": "Waterloo",
+   "exit": "Waterloo",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 40min",
+    "NR->LU 20min"
+   ]
+  },
+  "waterloo|waterloo east": {
+   "entry": "Waterloo East",
+   "exit": "Waterloo",
+   "metres": 0,
+   "minutes": 30,
+   "variants": [
+    "LU->NR 40min",
+    "NR->NR 30min"
+   ]
+  },
+  "west hampstead nll|west hampstead": {
+   "entry": "West Hampstead",
+   "exit": "West Hampstead NLL",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "west hampstead nll|west hampstead thameslink": {
+   "entry": "West Hampstead Thameslink",
+   "exit": "West Hampstead NLL",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "west hampstead thameslink|west hampstead": {
+   "entry": "West Hampstead",
+   "exit": "West Hampstead Thameslink",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "NR->LU 20min"
+   ]
+  },
+  "west hampstead thameslink|west hampstead nll": {
+   "entry": "West Hampstead NLL",
+   "exit": "West Hampstead Thameslink",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "west hampstead|west hampstead nll": {
+   "entry": "West Hampstead NLL",
+   "exit": "West Hampstead",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "west hampstead|west hampstead thameslink": {
+   "entry": "West Hampstead Thameslink",
+   "exit": "West Hampstead",
+   "metres": 220,
+   "minutes": 20,
+   "variants": [
+    "LU->NR 20min"
+   ]
+  },
+  "west india quay|canary wharf": {
+   "entry": "Canary Wharf EL",
+   "exit": "West India Quay",
+   "metres": 0,
+   "minutes": 20,
+   "variants": [
+    "DLR->NR 20min"
+   ]
+  },
+  "west ruislip|ickenham": {
+   "entry": "Ickenham",
+   "exit": "West Ruislip",
+   "metres": 1100,
+   "minutes": 30,
+   "variants": [
+    "ALL->LU 30min"
+   ]
+  },
+  "white city|wood lane": {
+   "entry": "Wood Lane",
+   "exit": "White City",
+   "metres": 240,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "whyteleafe|upper warlingham": {
+   "entry": "Upper Warlingham",
+   "exit": "Whyteleafe",
+   "metres": 280,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "windsor and eton central|windsor and eton riverside": {
+   "entry": "Windsor & Eton Riverside",
+   "exit": "Windsor & Eton Central",
+   "metres": 650,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "windsor and eton riverside|windsor and eton central": {
+   "entry": "Windsor & Eton Central",
+   "exit": "Windsor & Eton Riverside",
+   "metres": 650,
+   "minutes": 40,
+   "variants": [
+    "NR->NR 40min"
+   ]
+  },
+  "wood lane|white city": {
+   "entry": "White City",
+   "exit": "Wood Lane",
+   "metres": 240,
+   "minutes": 20,
+   "variants": [
+    "LU->LU 20min"
+   ]
+  },
+  "woodgrange pk|manor pk": {
+   "entry": "Manor Park",
+   "exit": "Woodgrange Park",
+   "metres": 500,
+   "minutes": 20,
+   "variants": [
+    "NR->NR 20min"
+   ]
+  },
+  "woolwich arsenal|woolwich": {
+   "entry": "Woolwich EL",
+   "exit": "Woolwich Arsenal",
+   "metres": 290,
+   "minutes": 20,
+   "variants": [
+    "ALL->NR 20min"
+   ]
+  },
+  "woolwich|woolwich arsenal": {
+   "entry": "Woolwich Arsenal",
+   "exit": "Woolwich EL",
+   "metres": 290,
+   "minutes": 20,
+   "variants": [
+    "NR->ALL 20min"
+   ]
+  }
+ },
+ "source_fares": "TfL Journey Planner API, read live",
+ "source_osi": "published out-of-station interchange list, as at July 2026",
+ "stations": {
+  "abbey rd": {
+   "lat": 51.531926,
+   "lon": 0.003737,
+   "name": "Abbey Road",
+   "naptan": "940GZZDLABR",
+   "zone": "2/3"
+  },
+  "abbey wood": {
+   "lat": 51.491284,
+   "lon": 0.121087,
+   "name": "Abbey Wood",
+   "naptan": "910GABWDXR",
+   "zone": "4"
+  },
+  "acton central": {
+   "lat": 51.508716,
+   "lon": -0.262971,
+   "name": "Acton Central",
+   "naptan": "910GACTNCTL",
+   "zone": "3"
+  },
+  "acton main line": {
+   "lat": 51.51718,
+   "lon": -0.266756,
+   "name": "Acton Main Line",
+   "naptan": "910GACTONML",
+   "zone": "3"
+  },
+  "acton town": {
+   "lat": 51.503057,
+   "lon": -0.280462,
+   "name": "Acton Town",
+   "naptan": "940GZZLUACT",
+   "zone": "3"
+  },
+  "addington village": {
+   "lat": 51.356599,
+   "lon": -0.032607,
+   "name": "Addington Village",
+   "naptan": "9400ZZCRADV1",
+   "zone": null
+  },
+  "addington village tram stop": {
+   "lat": 51.356241,
+   "lon": -0.032694,
+   "name": "Addington Village Tram Stop",
+   "naptan": "940GZZCRADV",
+   "zone": null
+  },
+  "addiscombe": {
+   "lat": 51.379753,
+   "lon": -0.073058,
+   "name": "Addiscombe",
+   "naptan": "9400ZZCRADD1",
+   "zone": null
+  },
+  "addiscombe tram stop": {
+   "lat": 51.37981,
+   "lon": -0.073242,
+   "name": "Addiscombe Tram Stop",
+   "naptan": "940GZZCRADD",
+   "zone": null
+  },
+  "aldgate": {
+   "lat": 51.514246,
+   "lon": -0.075689,
+   "name": "Aldgate",
+   "naptan": "940GZZLUALD",
+   "zone": "1"
+  },
+  "aldgate east": {
+   "lat": 51.515037,
+   "lon": -0.072384,
+   "name": "Aldgate East",
+   "naptan": "940GZZLUADE",
+   "zone": "1"
+  },
+  "all saints": {
+   "lat": 51.511,
+   "lon": -0.013135,
+   "name": "All Saints",
+   "naptan": "940GZZDLALL",
+   "zone": "2"
+  },
+  "alperton": {
+   "lat": 51.540627,
+   "lon": -0.29961,
+   "name": "Alperton",
+   "naptan": "940GZZLUALP",
+   "zone": "4"
+  },
+  "amersham": {
+   "lat": 51.674126,
+   "lon": -0.607714,
+   "name": "Amersham",
+   "naptan": "940GZZLUAMS",
+   "zone": "9"
+  },
+  "ampere way": {
+   "lat": 51.382238,
+   "lon": -0.123654,
+   "name": "Ampere Way",
+   "naptan": "9400ZZCRAMP1",
+   "zone": null
+  },
+  "ampere way tram stop": {
+   "lat": 51.382238,
+   "lon": -0.123654,
+   "name": "Ampere Way Tram Stop",
+   "naptan": "940GZZCRAMP",
+   "zone": null
+  },
+  "anerley": {
+   "lat": 51.412153,
+   "lon": -0.065886,
+   "name": "Anerley",
+   "naptan": "910GANERLEY",
+   "zone": "4"
+  },
+  "angel": {
+   "lat": 51.53184,
+   "lon": -0.10635,
+   "name": "Angel",
+   "naptan": "940GZZLUAGL",
+   "zone": "1"
+  },
+  "archway": {
+   "lat": 51.565478,
+   "lon": -0.134819,
+   "name": "Archway",
+   "naptan": "940GZZLUACY",
+   "zone": "2+3"
+  },
+  "arena": {
+   "lat": 51.391362,
+   "lon": -0.058297,
+   "name": "Arena",
+   "naptan": "9400ZZCRARA1",
+   "zone": null
+  },
+  "arena tram stop": {
+   "lat": 51.391525,
+   "lon": -0.058347,
+   "name": "Arena Tram Stop",
+   "naptan": "940GZZCRARA",
+   "zone": null
+  },
+  "arnos grove": {
+   "lat": 51.616446,
+   "lon": -0.133062,
+   "name": "Arnos Grove",
+   "naptan": "940GZZLUASG",
+   "zone": "4"
+  },
+  "arsenal": {
+   "lat": 51.558655,
+   "lon": -0.107457,
+   "name": "Arsenal",
+   "naptan": "940GZZLUASL",
+   "zone": "2"
+  },
+  "avenue rd": {
+   "lat": 51.407037,
+   "lon": -0.049092,
+   "name": "Avenue Road",
+   "naptan": "9400ZZCRAVE1",
+   "zone": null
+  },
+  "avenue rd tram stop": {
+   "lat": 51.4068,
+   "lon": -0.049476,
+   "name": "Avenue Road Tram Stop",
+   "naptan": "940GZZCRAVE",
+   "zone": null
+  },
+  "baker st": {
+   "lat": 51.522883,
+   "lon": -0.15713,
+   "name": "Baker Street",
+   "naptan": "940GZZLUBST",
+   "zone": "1"
+  },
+  "balham": {
+   "lat": 51.443288,
+   "lon": -0.152997,
+   "name": "Balham",
+   "naptan": "940GZZLUBLM",
+   "zone": "3"
+  },
+  "bank": {
+   "lat": 51.513132,
+   "lon": -0.090047,
+   "name": "Bank",
+   "naptan": "940GZZLUBNK",
+   "zone": "1"
+  },
+  "barbican": {
+   "lat": 51.520275,
+   "lon": -0.097993,
+   "name": "Barbican",
+   "naptan": "940GZZLUBBN",
+   "zone": "1"
+  },
+  "barking": {
+   "lat": 51.539321,
+   "lon": 0.081053,
+   "name": "Barking",
+   "naptan": "940GZZLUBKG",
+   "zone": "4"
+  },
+  "barking riverside": {
+   "lat": 51.51953,
+   "lon": 0.11596,
+   "name": "Barking Riverside",
+   "naptan": "910GBARKRIV",
+   "zone": "4"
+  },
+  "barkingside": {
+   "lat": 51.585689,
+   "lon": 0.088585,
+   "name": "Barkingside",
+   "naptan": "940GZZLUBKE",
+   "zone": "4"
+  },
+  "barons ct": {
+   "lat": 51.490311,
+   "lon": -0.213427,
+   "name": "Barons Court",
+   "naptan": "940GZZLUBSC",
+   "zone": "2"
+  },
+  "battersea pk": {
+   "lat": 51.47696,
+   "lon": -0.147533,
+   "name": "Battersea Park Rail Station",
+   "naptan": "910GBATRSPK",
+   "zone": "2"
+  },
+  "battersea power": {
+   "lat": 51.479932,
+   "lon": -0.142142,
+   "name": "Battersea Power Station",
+   "naptan": "940GZZBPSUST",
+   "zone": "1"
+  },
+  "bayswater": {
+   "lat": 51.512284,
+   "lon": -0.187938,
+   "name": "Bayswater",
+   "naptan": "940GZZLUBWT",
+   "zone": "1"
+  },
+  "beckenham jn": {
+   "lat": 51.410952,
+   "lon": -0.02619,
+   "name": "Beckenham Junction",
+   "naptan": "9400ZZCRBEK1",
+   "zone": null
+  },
+  "beckenham jn tram stop": {
+   "lat": 51.41073,
+   "lon": -0.026401,
+   "name": "Beckenham Junction Tram Stop",
+   "naptan": "940GZZCRBEK",
+   "zone": null
+  },
+  "beckenham rd": {
+   "lat": 51.409639,
+   "lon": -0.042855,
+   "name": "Beckenham Road",
+   "naptan": "9400ZZCRBRD1",
+   "zone": null
+  },
+  "beckenham rd tram stop": {
+   "lat": 51.409532,
+   "lon": -0.043421,
+   "name": "Beckenham Road Tram Stop",
+   "naptan": "940GZZCRBRD",
+   "zone": null
+  },
+  "beckton": {
+   "lat": 51.514362,
+   "lon": 0.061453,
+   "name": "Beckton",
+   "naptan": "940GZZDLBEC",
+   "zone": "3"
+  },
+  "beckton pk": {
+   "lat": 51.508793,
+   "lon": 0.054932,
+   "name": "Beckton Park",
+   "naptan": "940GZZDLBPK",
+   "zone": "3"
+  },
+  "becontree": {
+   "lat": 51.540331,
+   "lon": 0.127016,
+   "name": "Becontree",
+   "naptan": "940GZZLUBEC",
+   "zone": "5"
+  },
+  "beddington lane": {
+   "lat": 51.3893,
+   "lon": -0.142409,
+   "name": "Beddington Lane",
+   "naptan": "9400ZZCRBED1",
+   "zone": null
+  },
+  "beddington lane tram stop": {
+   "lat": 51.389242,
+   "lon": -0.142167,
+   "name": "Beddington Lane Tram Stop",
+   "naptan": "940GZZCRBED",
+   "zone": null
+  },
+  "belgrave walk": {
+   "lat": 51.399722,
+   "lon": -0.180256,
+   "name": "Belgrave Walk",
+   "naptan": "9400ZZCRBGV1",
+   "zone": null
+  },
+  "belgrave walk tram stop": {
+   "lat": 51.4011,
+   "lon": -0.17774,
+   "name": "Belgrave Walk Tram Stop",
+   "naptan": "940GZZCRBGV",
+   "zone": null
+  },
+  "belsize pk": {
+   "lat": 51.550311,
+   "lon": -0.164648,
+   "name": "Belsize Park",
+   "naptan": "940GZZLUBZP",
+   "zone": "2"
+  },
+  "bermondsey": {
+   "lat": 51.49775,
+   "lon": -0.063993,
+   "name": "Bermondsey",
+   "naptan": "940GZZLUBMY",
+   "zone": "2"
+  },
+  "bethnal grn": {
+   "lat": 51.527222,
+   "lon": -0.055506,
+   "name": "Bethnal Green",
+   "naptan": "940GZZLUBLG",
+   "zone": "2"
+  },
+  "birkbeck": {
+   "lat": 51.40405,
+   "lon": -0.056063,
+   "name": "Birkbeck",
+   "naptan": "9400ZZCRBIR1",
+   "zone": null
+  },
+  "birkbeck tram stop": {
+   "lat": 51.403767,
+   "lon": -0.055787,
+   "name": "Birkbeck Tram Stop",
+   "naptan": "940GZZCRBIR",
+   "zone": null
+  },
+  "blackfriars": {
+   "lat": 51.511581,
+   "lon": -0.103659,
+   "name": "Blackfriars",
+   "naptan": "940GZZLUBKF",
+   "zone": "1"
+  },
+  "blackhorse lane": {
+   "lat": 51.384748,
+   "lon": -0.070563,
+   "name": "Blackhorse Lane",
+   "naptan": "9400ZZCRBLA1",
+   "zone": null
+  },
+  "blackhorse lane tram stop": {
+   "lat": 51.384757,
+   "lon": -0.070562,
+   "name": "Blackhorse Lane Tram Stop",
+   "naptan": "940GZZCRBLA",
+   "zone": null
+  },
+  "blackhorse rd": {
+   "lat": 51.586919,
+   "lon": -0.04115,
+   "name": "Blackhorse Road",
+   "naptan": "940GZZLUBLR",
+   "zone": "3"
+  },
+  "blackwall": {
+   "lat": 51.507991,
+   "lon": -0.006969,
+   "name": "Blackwall",
+   "naptan": "940GZZDLBLA",
+   "zone": "2"
+  },
+  "bond st": {
+   "lat": 51.514304,
+   "lon": -0.149723,
+   "name": "Bond Street",
+   "naptan": "940GZZLUBND",
+   "zone": "1"
+  },
+  "borough": {
+   "lat": 51.501199,
+   "lon": -0.09337,
+   "name": "Borough",
+   "naptan": "940GZZLUBOR",
+   "zone": "1"
+  },
+  "boston manor": {
+   "lat": 51.495635,
+   "lon": -0.324939,
+   "name": "Boston Manor",
+   "naptan": "940GZZLUBOS",
+   "zone": "4"
+  },
+  "bounds grn": {
+   "lat": 51.607034,
+   "lon": -0.124235,
+   "name": "Bounds Green",
+   "naptan": "940GZZLUBDS",
+   "zone": "3+4"
+  },
+  "bow church": {
+   "lat": 51.527858,
+   "lon": -0.020936,
+   "name": "Bow Church",
+   "naptan": "940GZZDLBOW",
+   "zone": "2"
+  },
+  "bow rd": {
+   "lat": 51.52694,
+   "lon": -0.025128,
+   "name": "Bow Road",
+   "naptan": "940GZZLUBWR",
+   "zone": "2"
+  },
+  "bowes pk": {
+   "lat": 51.607012,
+   "lon": -0.120582,
+   "name": "Bowes Park Rail Station",
+   "naptan": "910GBOWESPK",
+   "zone": "3+4"
+  },
+  "brent cross": {
+   "lat": 51.57665,
+   "lon": -0.213622,
+   "name": "Brent Cross",
+   "naptan": "940GZZLUBTX",
+   "zone": "3"
+  },
+  "brentwood": {
+   "lat": 51.613605,
+   "lon": 0.299586,
+   "name": "Brentwood",
+   "naptan": "910GBRTWOOD",
+   "zone": "9"
+  },
+  "brixton": {
+   "lat": 51.462618,
+   "lon": -0.114888,
+   "name": "Brixton",
+   "naptan": "940GZZLUBXN",
+   "zone": "2"
+  },
+  "brockley": {
+   "lat": 51.464649,
+   "lon": -0.037537,
+   "name": "Brockley",
+   "naptan": "910GBROCKLY",
+   "zone": "2"
+  },
+  "bromley by bow": {
+   "lat": 51.524839,
+   "lon": -0.011538,
+   "name": "Bromley-by-Bow",
+   "naptan": "940GZZLUBBB",
+   "zone": "2/3"
+  },
+  "bromley north": {
+   "lat": 51.408328,
+   "lon": 0.016993,
+   "name": "Bromley North Rail Station",
+   "naptan": "910GBROMLYN",
+   "zone": "4"
+  },
+  "bromley south": {
+   "lat": 51.399976,
+   "lon": 0.017344,
+   "name": "Bromley South Rail Station",
+   "naptan": "910GBROMLYS",
+   "zone": "5"
+  },
+  "brondesbury": {
+   "lat": 51.545166,
+   "lon": -0.202309,
+   "name": "Brondesbury",
+   "naptan": "910GBRBY",
+   "zone": "2"
+  },
+  "brondesbury pk": {
+   "lat": 51.540734,
+   "lon": -0.210054,
+   "name": "Brondesbury Park",
+   "naptan": "910GBRBYPK",
+   "zone": "2"
+  },
+  "bruce grove": {
+   "lat": 51.593959,
+   "lon": -0.069867,
+   "name": "Bruce Grove",
+   "naptan": "910GBRUCGRV",
+   "zone": "3"
+  },
+  "buckhurst hill": {
+   "lat": 51.626605,
+   "lon": 0.046757,
+   "name": "Buckhurst Hill",
+   "naptan": "940GZZLUBKH",
+   "zone": "5"
+  },
+  "burnham berks": {
+   "lat": 51.523506,
+   "lon": -0.646374,
+   "name": "Burnham (Berks)",
+   "naptan": "910GBNHAM",
+   "zone": null
+  },
+  "burnt oak": {
+   "lat": 51.602774,
+   "lon": -0.264048,
+   "name": "Burnt Oak",
+   "naptan": "940GZZLUBTK",
+   "zone": "4"
+  },
+  "bush hill pk": {
+   "lat": 51.641519,
+   "lon": -0.069221,
+   "name": "Bush Hill Park",
+   "naptan": "910GBHILLPK",
+   "zone": "5"
+  },
+  "bushey": {
+   "lat": 51.645691,
+   "lon": -0.385612,
+   "name": "Bushey",
+   "naptan": "910GBUSHYDC",
+   "zone": "8"
+  },
+  "caledonian rd": {
+   "lat": 51.548519,
+   "lon": -0.118493,
+   "name": "Caledonian Road",
+   "naptan": "940GZZLUCAR",
+   "zone": "2"
+  },
+  "caledonian rd and barnsbury": {
+   "lat": 51.543041,
+   "lon": -0.116729,
+   "name": "Caledonian Road & Barnsbury",
+   "naptan": "910GCLDNNRB",
+   "zone": "2"
+  },
+  "cambridge heath london": {
+   "lat": 51.531973,
+   "lon": -0.057279,
+   "name": "Cambridge Heath (London)",
+   "naptan": "910GCAMHTH",
+   "zone": "2"
+  },
+  "camden rd": {
+   "lat": 51.541791,
+   "lon": -0.138701,
+   "name": "Camden Road",
+   "naptan": "910GCMDNRD",
+   "zone": "2"
+  },
+  "camden town": {
+   "lat": 51.539292,
+   "lon": -0.14274,
+   "name": "Camden Town",
+   "naptan": "940GZZLUCTN",
+   "zone": "2"
+  },
+  "canada water": {
+   "lat": 51.497931,
+   "lon": -0.049405,
+   "name": "Canada Water",
+   "naptan": "940GZZLUCWR",
+   "zone": "2"
+  },
+  "canary wharf": {
+   "lat": 51.503488,
+   "lon": -0.018246,
+   "name": "Canary Wharf",
+   "naptan": "940GZZLUCYF",
+   "zone": "2"
+  },
+  "canning town": {
+   "lat": 51.513584,
+   "lon": 0.008322,
+   "name": "Canning Town",
+   "naptan": "940GZZLUCGT",
+   "zone": "2/3"
+  },
+  "cannon st": {
+   "lat": 51.51151,
+   "lon": -0.090432,
+   "name": "Cannon Street",
+   "naptan": "940GZZLUCST",
+   "zone": "1"
+  },
+  "canonbury": {
+   "lat": 51.548732,
+   "lon": -0.092191,
+   "name": "Canonbury",
+   "naptan": "910GCNNB",
+   "zone": "2"
+  },
+  "canons pk": {
+   "lat": 51.607701,
+   "lon": -0.294693,
+   "name": "Canons Park",
+   "naptan": "940GZZLUCPK",
+   "zone": "5"
+  },
+  "carpenders pk": {
+   "lat": 51.628351,
+   "lon": -0.385939,
+   "name": "Carpenders Park",
+   "naptan": "910GCRPNDPK",
+   "zone": "7"
+  },
+  "catford": {
+   "lat": 51.444407,
+   "lon": -0.026317,
+   "name": "Catford Rail Station",
+   "naptan": "910GCATFORD",
+   "zone": "3"
+  },
+  "catford br": {
+   "lat": 51.444741,
+   "lon": -0.024791,
+   "name": "Catford Bridge Rail Station",
+   "naptan": "910GCATFBDG",
+   "zone": "3"
+  },
+  "centrale": {
+   "lat": 51.376229,
+   "lon": -0.103424,
+   "name": "Centrale",
+   "naptan": "9400ZZCRCTR1",
+   "zone": null
+  },
+  "centrale tram stop": {
+   "lat": 51.375769,
+   "lon": -0.103917,
+   "name": "Centrale Tram Stop",
+   "naptan": "940GZZCRCTR",
+   "zone": null
+  },
+  "chadwell heath": {
+   "lat": 51.568039,
+   "lon": 0.128958,
+   "name": "Chadwell Heath",
+   "naptan": "910GCHDWLHT",
+   "zone": "5"
+  },
+  "chalfont and latimer": {
+   "lat": 51.667985,
+   "lon": -0.560689,
+   "name": "Chalfont & Latimer",
+   "naptan": "940GZZLUCAL",
+   "zone": "8"
+  },
+  "chalk farm": {
+   "lat": 51.544118,
+   "lon": -0.153388,
+   "name": "Chalk Farm",
+   "naptan": "940GZZLUCFM",
+   "zone": "2"
+  },
+  "chancery lane": {
+   "lat": 51.518247,
+   "lon": -0.111583,
+   "name": "Chancery Lane",
+   "naptan": "940GZZLUCHL",
+   "zone": "1"
+  },
+  "charing cross": {
+   "lat": 51.50741,
+   "lon": -0.127277,
+   "name": "Charing Cross",
+   "naptan": "940GZZLUCHX",
+   "zone": "1"
+  },
+  "chesham": {
+   "lat": 51.705208,
+   "lon": -0.611247,
+   "name": "Chesham",
+   "naptan": "940GZZLUCSM",
+   "zone": "9"
+  },
+  "cheshunt": {
+   "lat": 51.702876,
+   "lon": -0.02396,
+   "name": "Cheshunt",
+   "naptan": "910GCHESHNT",
+   "zone": "8"
+  },
+  "chigwell": {
+   "lat": 51.617916,
+   "lon": 0.075041,
+   "name": "Chigwell",
+   "naptan": "940GZZLUCWL",
+   "zone": "4"
+  },
+  "chingford": {
+   "lat": 51.633087,
+   "lon": 0.009897,
+   "name": "Chingford",
+   "naptan": "910GCHINGFD",
+   "zone": "5"
+  },
+  "chiswick pk": {
+   "lat": 51.494627,
+   "lon": -0.267972,
+   "name": "Chiswick Park",
+   "naptan": "940GZZLUCWP",
+   "zone": "3"
+  },
+  "chorleywood": {
+   "lat": 51.654358,
+   "lon": -0.518461,
+   "name": "Chorleywood",
+   "naptan": "940GZZLUCYD",
+   "zone": "7"
+  },
+  "church st": {
+   "lat": 51.373774,
+   "lon": -0.103985,
+   "name": "Church Street",
+   "naptan": "9400ZZCRCHR1",
+   "zone": null
+  },
+  "church st tram stop": {
+   "lat": 51.373708,
+   "lon": -0.104361,
+   "name": "Church Street Tram Stop",
+   "naptan": "940GZZCRCHR",
+   "zone": null
+  },
+  "clapham common": {
+   "lat": 51.461742,
+   "lon": -0.138317,
+   "name": "Clapham Common",
+   "naptan": "940GZZLUCPC",
+   "zone": "2"
+  },
+  "clapham high st": {
+   "lat": 51.465481,
+   "lon": -0.132522,
+   "name": "Clapham High Street",
+   "naptan": "910GCLPHHS",
+   "zone": "2"
+  },
+  "clapham jn": {
+   "lat": 51.464187,
+   "lon": -0.170221,
+   "name": "Clapham Junction",
+   "naptan": "910GCLPHMJ1",
+   "zone": null
+  },
+  "clapham north": {
+   "lat": 51.465135,
+   "lon": -0.130016,
+   "name": "Clapham North",
+   "naptan": "940GZZLUCPN",
+   "zone": "2"
+  },
+  "clapham south": {
+   "lat": 51.452654,
+   "lon": -0.147582,
+   "name": "Clapham South",
+   "naptan": "940GZZLUCPS",
+   "zone": "2+3"
+  },
+  "clapton": {
+   "lat": 51.561644,
+   "lon": -0.057025,
+   "name": "Clapton",
+   "naptan": "910GCLAPTON",
+   "zone": "2+3"
+  },
+  "clock house": {
+   "lat": 51.408586,
+   "lon": -0.040657,
+   "name": "Clock House Rail Station",
+   "naptan": "910GCLOCKHS",
+   "zone": "4"
+  },
+  "cockfosters": {
+   "lat": 51.65152,
+   "lon": -0.149171,
+   "name": "Cockfosters",
+   "naptan": "940GZZLUCKS",
+   "zone": "5"
+  },
+  "colindale": {
+   "lat": 51.595424,
+   "lon": -0.249919,
+   "name": "Colindale",
+   "naptan": "940GZZLUCND",
+   "zone": "4"
+  },
+  "colliers wood": {
+   "lat": 51.41816,
+   "lon": -0.178086,
+   "name": "Colliers Wood",
+   "naptan": "940GZZLUCSD",
+   "zone": "3"
+  },
+  "coombe lane": {
+   "lat": 51.359875,
+   "lon": -0.058623,
+   "name": "Coombe Lane",
+   "naptan": "9400ZZCRCOO1",
+   "zone": null
+  },
+  "coombe lane tram stop": {
+   "lat": 51.359791,
+   "lon": -0.05956,
+   "name": "Coombe Lane Tram Stop",
+   "naptan": "940GZZCRCOO",
+   "zone": null
+  },
+  "covent garden": {
+   "lat": 51.513093,
+   "lon": -0.124436,
+   "name": "Covent Garden",
+   "naptan": "940GZZLUCGN",
+   "zone": "1"
+  },
+  "crossharbour": {
+   "lat": 51.495728,
+   "lon": -0.014606,
+   "name": "Crossharbour",
+   "naptan": "940GZZDLCLA",
+   "zone": "2"
+  },
+  "crouch hill": {
+   "lat": 51.571302,
+   "lon": -0.117149,
+   "name": "Crouch Hill",
+   "naptan": "910GCROUCHH",
+   "zone": "3"
+  },
+  "croxley": {
+   "lat": 51.647044,
+   "lon": -0.441718,
+   "name": "Croxley",
+   "naptan": "940GZZLUCXY",
+   "zone": "7"
+  },
+  "crystal palace": {
+   "lat": 51.418109,
+   "lon": -0.07261,
+   "name": "Crystal Palace",
+   "naptan": "910GCRYSTLP",
+   "zone": "3+4"
+  },
+  "custom house": {
+   "lat": 51.509769,
+   "lon": 0.02673,
+   "name": "Custom House",
+   "naptan": "910GCUSTMHS",
+   "zone": "3"
+  },
+  "custom house for excel": {
+   "lat": 51.509716,
+   "lon": 0.026699,
+   "name": "Custom House (for ExCel)",
+   "naptan": "940GZZDLCUS",
+   "zone": "3"
+  },
+  "cutty sark for maritime greenwich": {
+   "lat": 51.481671,
+   "lon": -0.01081,
+   "name": "Cutty Sark (for Maritime Greenwich)",
+   "naptan": "940GZZDLCUT",
+   "zone": "2+3"
+  },
+  "cyprus": {
+   "lat": 51.508473,
+   "lon": 0.063925,
+   "name": "Cyprus",
+   "naptan": "940GZZDLCYP",
+   "zone": "3"
+  },
+  "dagenham east": {
+   "lat": 51.544096,
+   "lon": 0.166017,
+   "name": "Dagenham East",
+   "naptan": "940GZZLUDGE",
+   "zone": "5"
+  },
+  "dagenham heathway": {
+   "lat": 51.541639,
+   "lon": 0.147527,
+   "name": "Dagenham Heathway",
+   "naptan": "940GZZLUDGY",
+   "zone": "5"
+  },
+  "dalston jn": {
+   "lat": 51.546116,
+   "lon": -0.075137,
+   "name": "Dalston Junction",
+   "naptan": "910GDALS",
+   "zone": "2"
+  },
+  "dalston kingsland": {
+   "lat": 51.548148,
+   "lon": -0.075701,
+   "name": "Dalston Kingsland",
+   "naptan": "910GDALSKLD",
+   "zone": "2"
+  },
+  "debden": {
+   "lat": 51.645386,
+   "lon": 0.083782,
+   "name": "Debden",
+   "naptan": "940GZZLUDBN",
+   "zone": "6"
+  },
+  "denmark hill": {
+   "lat": 51.468203,
+   "lon": -0.089361,
+   "name": "Denmark Hill",
+   "naptan": "910GDENMRKH",
+   "zone": "2"
+  },
+  "deptford br": {
+   "lat": 51.474215,
+   "lon": -0.022438,
+   "name": "Deptford Bridge",
+   "naptan": "940GZZDLDEP",
+   "zone": "2+3"
+  },
+  "devons rd": {
+   "lat": 51.522667,
+   "lon": -0.017615,
+   "name": "Devons Road",
+   "naptan": "940GZZDLDEV",
+   "zone": "2"
+  },
+  "dollis hill": {
+   "lat": 51.551955,
+   "lon": -0.239068,
+   "name": "Dollis Hill",
+   "naptan": "940GZZLUDOH",
+   "zone": "3"
+  },
+  "dundonald rd": {
+   "lat": 51.417608,
+   "lon": -0.207648,
+   "name": "Dundonald Road",
+   "naptan": "9400ZZCRDDR1",
+   "zone": null
+  },
+  "dundonald rd tram stop": {
+   "lat": 51.417555,
+   "lon": -0.207679,
+   "name": "Dundonald Road Tram Stop",
+   "naptan": "940GZZCRDDR",
+   "zone": null
+  },
+  "ealing broadway": {
+   "lat": 51.515017,
+   "lon": -0.301457,
+   "name": "Ealing Broadway",
+   "naptan": "940GZZLUEBY",
+   "zone": "3"
+  },
+  "ealing common": {
+   "lat": 51.51014,
+   "lon": -0.288265,
+   "name": "Ealing Common",
+   "naptan": "940GZZLUECM",
+   "zone": "3"
+  },
+  "earls ct": {
+   "lat": 51.492063,
+   "lon": -0.193378,
+   "name": "Earl's Court",
+   "naptan": "940GZZLUECT",
+   "zone": "1+2"
+  },
+  "east acton": {
+   "lat": 51.516612,
+   "lon": -0.247248,
+   "name": "East Acton",
+   "naptan": "940GZZLUEAN",
+   "zone": "2"
+  },
+  "east croydon": {
+   "lat": 51.374854,
+   "lon": -0.092417,
+   "name": "East Croydon",
+   "naptan": "9400ZZCRECR1",
+   "zone": null
+  },
+  "east croydon tram stop": {
+   "lat": 51.374863,
+   "lon": -0.092416,
+   "name": "East Croydon Tram Stop",
+   "naptan": "940GZZCRECR",
+   "zone": null
+  },
+  "east finchley": {
+   "lat": 51.587131,
+   "lon": -0.165012,
+   "name": "East Finchley",
+   "naptan": "940GZZLUEFY",
+   "zone": "3"
+  },
+  "east ham": {
+   "lat": 51.538948,
+   "lon": 0.051186,
+   "name": "East Ham",
+   "naptan": "940GZZLUEHM",
+   "zone": "3+4"
+  },
+  "east india": {
+   "lat": 51.509359,
+   "lon": -0.002326,
+   "name": "East India",
+   "naptan": "940GZZDLEIN",
+   "zone": "2/3"
+  },
+  "east putney": {
+   "lat": 51.459205,
+   "lon": -0.211,
+   "name": "East Putney",
+   "naptan": "940GZZLUEPY",
+   "zone": "2+3"
+  },
+  "eastcote": {
+   "lat": 51.576506,
+   "lon": -0.397373,
+   "name": "Eastcote",
+   "naptan": "940GZZLUEAE",
+   "zone": "5"
+  },
+  "edgware": {
+   "lat": 51.613653,
+   "lon": -0.274928,
+   "name": "Edgware",
+   "naptan": "940GZZLUEGW",
+   "zone": "5"
+  },
+  "edgware rd bak": {
+   "alias_of": "Edgware Road (Bakerloo)",
+   "lat": 51.520299,
+   "lon": -0.17015,
+   "name": "Edgware Road (Bakerloo)",
+   "naptan": "940GZZLUERB",
+   "zone": "1"
+  },
+  "edgware rd bakerloo": {
+   "lat": 51.520299,
+   "lon": -0.17015,
+   "name": "Edgware Road (Bakerloo)",
+   "naptan": "940GZZLUERB",
+   "zone": "1"
+  },
+  "edgware rd cdh": {
+   "alias_of": "Edgware Road (Circle Line)",
+   "lat": 51.519858,
+   "lon": -0.167832,
+   "name": "Edgware Road (Circle Line)",
+   "naptan": "940GZZLUERC",
+   "zone": "1"
+  },
+  "edgware rd circle line": {
+   "lat": 51.519858,
+   "lon": -0.167832,
+   "name": "Edgware Road (Circle Line)",
+   "naptan": "940GZZLUERC",
+   "zone": "1"
+  },
+  "edmonton grn": {
+   "lat": 51.624929,
+   "lon": -0.061112,
+   "name": "Edmonton Green",
+   "naptan": "910GEDMNGRN",
+   "zone": "4"
+  },
+  "elephant and castle": {
+   "lat": 51.494536,
+   "lon": -0.100606,
+   "name": "Elephant & Castle",
+   "naptan": "940GZZLUEAC",
+   "zone": "1+2"
+  },
+  "elm pk": {
+   "lat": 51.549775,
+   "lon": 0.19864,
+   "name": "Elm Park",
+   "naptan": "940GZZLUEPK",
+   "zone": "6"
+  },
+  "elmers end": {
+   "lat": 51.39851,
+   "lon": -0.049555,
+   "name": "Elmers End",
+   "naptan": "9400ZZCRELM1",
+   "zone": null
+  },
+  "elmers end tram stop": {
+   "lat": 51.398474,
+   "lon": -0.049557,
+   "name": "Elmers End Tram Stop",
+   "naptan": "940GZZCRELM",
+   "zone": null
+  },
+  "elverson rd": {
+   "lat": 51.469074,
+   "lon": -0.016728,
+   "name": "Elverson Road",
+   "naptan": "940GZZDLELV",
+   "zone": "2+3"
+  },
+  "embankment": {
+   "lat": 51.507058,
+   "lon": -0.122666,
+   "name": "Embankment",
+   "naptan": "940GZZLUEMB",
+   "zone": "1"
+  },
+  "emerson pk": {
+   "lat": 51.568642,
+   "lon": 0.220113,
+   "name": "Emerson Park",
+   "naptan": "910GEMRSPKH",
+   "zone": "6"
+  },
+  "enfield town": {
+   "lat": 51.652026,
+   "lon": -0.079328,
+   "name": "Enfield Town",
+   "naptan": "910GENFLDTN",
+   "zone": "5"
+  },
+  "epping": {
+   "lat": 51.69368,
+   "lon": 0.113767,
+   "name": "Epping",
+   "naptan": "940GZZLUEPG",
+   "zone": "6"
+  },
+  "euston": {
+   "lat": 51.527999,
+   "lon": -0.133785,
+   "name": "Euston",
+   "naptan": "940GZZLUEUS",
+   "zone": "1"
+  },
+  "euston sq": {
+   "lat": 51.525604,
+   "lon": -0.135829,
+   "name": "Euston Square",
+   "naptan": "940GZZLUESQ",
+   "zone": "1"
+  },
+  "fairlop": {
+   "lat": 51.595618,
+   "lon": 0.091004,
+   "name": "Fairlop",
+   "naptan": "940GZZLUFLP",
+   "zone": "4"
+  },
+  "farringdon": {
+   "lat": 51.520252,
+   "lon": -0.104913,
+   "name": "Farringdon",
+   "naptan": "940GZZLUFCN",
+   "zone": "1"
+  },
+  "fenchurch st": {
+   "lat": 51.511646,
+   "lon": -0.078897,
+   "name": "London Fenchurch Street Rail Station",
+   "naptan": "910GFENCHRS",
+   "zone": "1"
+  },
+  "fieldway": {
+   "lat": 51.351305,
+   "lon": -0.024245,
+   "name": "Fieldway",
+   "naptan": "9400ZZCRFLD1",
+   "zone": null
+  },
+  "fieldway tram stop": {
+   "lat": 51.351319,
+   "lon": -0.024532,
+   "name": "Fieldway Tram Stop",
+   "naptan": "940GZZCRFLD",
+   "zone": null
+  },
+  "finchley central": {
+   "lat": 51.600921,
+   "lon": -0.192527,
+   "name": "Finchley Central",
+   "naptan": "940GZZLUFYC",
+   "zone": "4"
+  },
+  "finchley rd": {
+   "lat": 51.546825,
+   "lon": -0.179845,
+   "name": "Finchley Road",
+   "naptan": "940GZZLUFYR",
+   "zone": "2"
+  },
+  "finchley rd and frognal": {
+   "lat": 51.550266,
+   "lon": -0.183141,
+   "name": "Finchley Road & Frognal",
+   "naptan": "910GFNCHLYR",
+   "zone": "2"
+  },
+  "finsbury pk": {
+   "lat": 51.564158,
+   "lon": -0.106825,
+   "name": "Finsbury Park",
+   "naptan": "940GZZLUFPK",
+   "zone": "2"
+  },
+  "forest gate": {
+   "lat": 51.549432,
+   "lon": 0.024353,
+   "name": "Forest Gate",
+   "naptan": "910GFRSTGT",
+   "zone": "3"
+  },
+  "forest hill": {
+   "lat": 51.43928,
+   "lon": -0.053157,
+   "name": "Forest Hill",
+   "naptan": "910GFORESTH",
+   "zone": "3"
+  },
+  "fulham broadway": {
+   "lat": 51.480081,
+   "lon": -0.195422,
+   "name": "Fulham Broadway",
+   "naptan": "940GZZLUFBY",
+   "zone": "2"
+  },
+  "gallions reach": {
+   "lat": 51.508941,
+   "lon": 0.071555,
+   "name": "Gallions Reach",
+   "naptan": "940GZZDLGAL",
+   "zone": "3"
+  },
+  "gants hill": {
+   "lat": 51.576544,
+   "lon": 0.066185,
+   "name": "Gants Hill",
+   "naptan": "940GZZLUGTH",
+   "zone": "4"
+  },
+  "george st": {
+   "lat": 51.373815,
+   "lon": -0.098753,
+   "name": "George Street",
+   "naptan": "9400ZZCRCEN1",
+   "zone": null
+  },
+  "george st tram stop": {
+   "lat": 51.373977,
+   "lon": -0.098746,
+   "name": "George Street Tram Stop",
+   "naptan": "940GZZCRCEN",
+   "zone": null
+  },
+  "gidea pk": {
+   "lat": 51.581904,
+   "lon": 0.205964,
+   "name": "Gidea Park",
+   "naptan": "910GGIDEAPK",
+   "zone": "6"
+  },
+  "gloucester rd": {
+   "lat": 51.494316,
+   "lon": -0.182658,
+   "name": "Gloucester Road",
+   "naptan": "940GZZLUGTR",
+   "zone": "1"
+  },
+  "golders grn": {
+   "lat": 51.572259,
+   "lon": -0.194039,
+   "name": "Golders Green",
+   "naptan": "940GZZLUGGN",
+   "zone": "3"
+  },
+  "goldhawk rd": {
+   "lat": 51.502005,
+   "lon": -0.226715,
+   "name": "Goldhawk Road",
+   "naptan": "940GZZLUGHK",
+   "zone": "2"
+  },
+  "goodge st": {
+   "lat": 51.520599,
+   "lon": -0.134361,
+   "name": "Goodge Street",
+   "naptan": "940GZZLUGDG",
+   "zone": "1"
+  },
+  "goodmayes": {
+   "lat": 51.565579,
+   "lon": 0.110807,
+   "name": "Goodmayes",
+   "naptan": "910GGODMAYS",
+   "zone": "4"
+  },
+  "gospel oak": {
+   "lat": 51.555335,
+   "lon": -0.15077,
+   "name": "Gospel Oak",
+   "naptan": "910GGOSPLOK",
+   "zone": "2"
+  },
+  "grange hill": {
+   "lat": 51.613378,
+   "lon": 0.092066,
+   "name": "Grange Hill",
+   "naptan": "940GZZLUGGH",
+   "zone": "4"
+  },
+  "gravel hill": {
+   "lat": 51.354676,
+   "lon": -0.042355,
+   "name": "Gravel Hill",
+   "naptan": "9400ZZCRGRA1",
+   "zone": null
+  },
+  "gravel hill tram stop": {
+   "lat": 51.354545,
+   "lon": -0.04315,
+   "name": "Gravel Hill Tram Stop",
+   "naptan": "940GZZCRGRA",
+   "zone": null
+  },
+  "great portland st": {
+   "lat": 51.52384,
+   "lon": -0.144262,
+   "name": "Great Portland Street",
+   "naptan": "940GZZLUGPS",
+   "zone": "1"
+  },
+  "greenford": {
+   "lat": 51.542424,
+   "lon": -0.34605,
+   "name": "Greenford",
+   "naptan": "940GZZLUGFD",
+   "zone": "4"
+  },
+  "greenwich": {
+   "lat": 51.478087,
+   "lon": -0.013673,
+   "name": "Greenwich",
+   "naptan": "940GZZDLGRE",
+   "zone": "2+3"
+  },
+  "grn pk": {
+   "lat": 51.506947,
+   "lon": -0.142787,
+   "name": "Green Park",
+   "naptan": "940GZZLUGPK",
+   "zone": "1"
+  },
+  "gunnersbury": {
+   "lat": 51.491803,
+   "lon": -0.275267,
+   "name": "Gunnersbury",
+   "naptan": "940GZZLUGBY",
+   "zone": "3"
+  },
+  "hackney central": {
+   "lat": 51.547105,
+   "lon": -0.056058,
+   "name": "Hackney Central",
+   "naptan": "910GHACKNYC",
+   "zone": "2"
+  },
+  "hackney downs": {
+   "lat": 51.548757,
+   "lon": -0.060819,
+   "name": "Hackney Downs",
+   "naptan": "910GHAKNYNM",
+   "zone": "2"
+  },
+  "hackney wick": {
+   "lat": 51.54341,
+   "lon": -0.02492,
+   "name": "Hackney Wick",
+   "naptan": "910GHACKNYW",
+   "zone": "2"
+  },
+  "haggerston": {
+   "lat": 51.538705,
+   "lon": -0.075666,
+   "name": "Haggerston",
+   "naptan": "910GHAGGERS",
+   "zone": "2"
+  },
+  "hainault": {
+   "lat": 51.603659,
+   "lon": 0.093482,
+   "name": "Hainault",
+   "naptan": "940GZZLUHLT",
+   "zone": "4"
+  },
+  "hammersmith cir h and c": {
+   "alias_of": "Hammersmith (H&C Line)",
+   "lat": 51.49339,
+   "lon": -0.22503,
+   "name": "Hammersmith (H&C Line)",
+   "naptan": "940GZZLUHSC",
+   "zone": "2"
+  },
+  "hammersmith dis pic": {
+   "alias_of": "Hammersmith (Dist&Picc Line)",
+   "lat": 51.4923,
+   "lon": -0.22362,
+   "name": "Hammersmith (Dist&Picc Line)",
+   "naptan": "940GZZLUHSD",
+   "zone": "2"
+  },
+  "hammersmith dist and picc line": {
+   "lat": 51.4923,
+   "lon": -0.22362,
+   "name": "Hammersmith (Dist&Picc Line)",
+   "naptan": "940GZZLUHSD",
+   "zone": "2"
+  },
+  "hammersmith h and c line": {
+   "lat": 51.49339,
+   "lon": -0.22503,
+   "name": "Hammersmith (H&C Line)",
+   "naptan": "940GZZLUHSC",
+   "zone": "2"
+  },
+  "hampstead": {
+   "lat": 51.556239,
+   "lon": -0.177464,
+   "name": "Hampstead",
+   "naptan": "940GZZLUHTD",
+   "zone": "2+3"
+  },
+  "hampstead heath": {
+   "lat": 51.55521,
+   "lon": -0.165705,
+   "name": "Hampstead Heath",
+   "naptan": "910GHMPSTDH",
+   "zone": "2"
+  },
+  "hanger lane": {
+   "lat": 51.530177,
+   "lon": -0.292704,
+   "name": "Hanger Lane",
+   "naptan": "940GZZLUHGR",
+   "zone": "3"
+  },
+  "hanwell": {
+   "lat": 51.511835,
+   "lon": -0.338583,
+   "name": "Hanwell",
+   "naptan": "910GHANWELL",
+   "zone": "4"
+  },
+  "harlesden": {
+   "lat": 51.53631,
+   "lon": -0.257883,
+   "name": "Harlesden",
+   "naptan": "940GZZLUHSN",
+   "zone": "3"
+  },
+  "harold wood": {
+   "lat": 51.592766,
+   "lon": 0.233129,
+   "name": "Harold Wood",
+   "naptan": "910GHRLDWOD",
+   "zone": "6"
+  },
+  "harringay": {
+   "lat": 51.577358,
+   "lon": -0.105136,
+   "name": "Harringay Rail Station",
+   "naptan": "910GHRGY",
+   "zone": "3"
+  },
+  "harringay grn lanes": {
+   "lat": 51.577182,
+   "lon": -0.098144,
+   "name": "Harringay Green Lanes",
+   "naptan": "910GHRGYGL",
+   "zone": "3"
+  },
+  "harrington rd": {
+   "lat": 51.399609,
+   "lon": -0.060478,
+   "name": "Harrington Road",
+   "naptan": "9400ZZCRHAR1",
+   "zone": null
+  },
+  "harrington rd tram stop": {
+   "lat": 51.399793,
+   "lon": -0.060729,
+   "name": "Harrington Road Tram Stop",
+   "naptan": "940GZZCRHAR",
+   "zone": null
+  },
+  "harrow and wealdstone": {
+   "lat": 51.592268,
+   "lon": -0.335217,
+   "name": "Harrow & Wealdstone",
+   "naptan": "940GZZLUHAW",
+   "zone": "5"
+  },
+  "harrow on the hill": {
+   "lat": 51.579195,
+   "lon": -0.337225,
+   "name": "Harrow-on-the-Hill",
+   "naptan": "940GZZLUHOH",
+   "zone": "5"
+  },
+  "hatch end": {
+   "lat": 51.609417,
+   "lon": -0.368601,
+   "name": "Hatch End",
+   "naptan": "910GHTCHEND",
+   "zone": "6"
+  },
+  "hatton cross": {
+   "lat": 51.466747,
+   "lon": -0.423191,
+   "name": "Hatton Cross",
+   "naptan": "940GZZLUHNX",
+   "zone": "5+6"
+  },
+  "hayes and harlington": {
+   "lat": 51.503096,
+   "lon": -0.420683,
+   "name": "Hayes & Harlington",
+   "naptan": "910GHAYESAH",
+   "zone": "5"
+  },
+  "headstone lane": {
+   "lat": 51.602649,
+   "lon": -0.35722,
+   "name": "Headstone Lane",
+   "naptan": "910GHEDSTNL",
+   "zone": "5"
+  },
+  "heathrow terminal 4": {
+   "lat": 51.458524,
+   "lon": -0.445771,
+   "name": "Heathrow Terminal 4",
+   "naptan": "940GZZLUHR4",
+   "zone": "6"
+  },
+  "heathrow terminal 5": {
+   "lat": 51.470052,
+   "lon": -0.49056,
+   "name": "Heathrow Terminal 5",
+   "naptan": "940GZZLUHR5",
+   "zone": "6"
+  },
+  "heathrow terminals 2 and 3": {
+   "lat": 51.471235,
+   "lon": -0.452265,
+   "name": "Heathrow Terminals 2 & 3",
+   "naptan": "940GZZLUHRC",
+   "zone": "6"
+  },
+  "hendon central": {
+   "lat": 51.583301,
+   "lon": -0.226424,
+   "name": "Hendon Central",
+   "naptan": "940GZZLUHCL",
+   "zone": "3+4"
+  },
+  "heron quays": {
+   "lat": 51.503379,
+   "lon": -0.021421,
+   "name": "Heron Quays",
+   "naptan": "940GZZDLHEQ",
+   "zone": "2"
+  },
+  "high barnet": {
+   "lat": 51.650541,
+   "lon": -0.194298,
+   "name": "High Barnet",
+   "naptan": "940GZZLUHBT",
+   "zone": "5"
+  },
+  "high st kensington": {
+   "lat": 51.501055,
+   "lon": -0.192792,
+   "name": "High Street Kensington",
+   "naptan": "940GZZLUHSK",
+   "zone": "1"
+  },
+  "highams pk": {
+   "lat": 51.60835,
+   "lon": -0.000222,
+   "name": "Highams Park",
+   "naptan": "910GHGHMSPK",
+   "zone": "4"
+  },
+  "highbury and islington": {
+   "lat": 51.54635,
+   "lon": -0.103324,
+   "name": "Highbury & Islington",
+   "naptan": "940GZZLUHAI",
+   "zone": "2"
+  },
+  "highgate": {
+   "lat": 51.577532,
+   "lon": -0.145857,
+   "name": "Highgate",
+   "naptan": "940GZZLUHGT",
+   "zone": "3"
+  },
+  "hillingdon": {
+   "lat": 51.553715,
+   "lon": -0.449828,
+   "name": "Hillingdon",
+   "naptan": "940GZZLUHGD",
+   "zone": "6"
+  },
+  "holborn": {
+   "lat": 51.51758,
+   "lon": -0.120475,
+   "name": "Holborn",
+   "naptan": "940GZZLUHBN",
+   "zone": "1"
+  },
+  "holland pk": {
+   "lat": 51.507143,
+   "lon": -0.205679,
+   "name": "Holland Park",
+   "naptan": "940GZZLUHPK",
+   "zone": "2"
+  },
+  "holloway rd": {
+   "lat": 51.552697,
+   "lon": -0.113244,
+   "name": "Holloway Road",
+   "naptan": "940GZZLUHWY",
+   "zone": "2"
+  },
+  "homerton": {
+   "lat": 51.547012,
+   "lon": -0.04236,
+   "name": "Homerton",
+   "naptan": "910GHOMRTON",
+   "zone": "2"
+  },
+  "honor oak pk": {
+   "lat": 51.449989,
+   "lon": -0.045505,
+   "name": "Honor Oak Park",
+   "naptan": "910GHONROPK",
+   "zone": "3"
+  },
+  "hornchurch": {
+   "lat": 51.554093,
+   "lon": 0.219116,
+   "name": "Hornchurch",
+   "naptan": "940GZZLUHCH",
+   "zone": "6"
+  },
+  "hounslow central": {
+   "lat": 51.471295,
+   "lon": -0.366578,
+   "name": "Hounslow Central",
+   "naptan": "940GZZLUHWC",
+   "zone": "4"
+  },
+  "hounslow east": {
+   "lat": 51.473213,
+   "lon": -0.356474,
+   "name": "Hounslow East",
+   "naptan": "940GZZLUHWE",
+   "zone": "4"
+  },
+  "hounslow west": {
+   "lat": 51.473469,
+   "lon": -0.386544,
+   "name": "Hounslow West",
+   "naptan": "940GZZLUHWT",
+   "zone": "5"
+  },
+  "hoxton": {
+   "lat": 51.531512,
+   "lon": -0.075681,
+   "name": "Hoxton",
+   "naptan": "910GHOXTON",
+   "zone": "1+2"
+  },
+  "hyde pk corner": {
+   "lat": 51.503035,
+   "lon": -0.152441,
+   "name": "Hyde Park Corner",
+   "naptan": "940GZZLUHPC",
+   "zone": "1"
+  },
+  "ickenham": {
+   "lat": 51.56177,
+   "lon": -0.442225,
+   "name": "Ickenham",
+   "naptan": "940GZZLUICK",
+   "zone": "6"
+  },
+  "ilford": {
+   "lat": 51.559118,
+   "lon": 0.06968,
+   "name": "Ilford",
+   "naptan": "910GILFORD",
+   "zone": "4"
+  },
+  "imperial wharf": {
+   "lat": 51.474949,
+   "lon": -0.182823,
+   "name": "Imperial Wharf",
+   "naptan": "910GCSEAH",
+   "zone": "2"
+  },
+  "island gdns": {
+   "lat": 51.487811,
+   "lon": -0.010139,
+   "name": "Island Gardens",
+   "naptan": "940GZZDLISL",
+   "zone": "2"
+  },
+  "iver": {
+   "lat": 51.508503,
+   "lon": -0.506726,
+   "name": "Iver",
+   "naptan": "910GIVER",
+   "zone": null
+  },
+  "kennington": {
+   "lat": 51.488337,
+   "lon": -0.105963,
+   "name": "Kennington",
+   "naptan": "940GZZLUKNG",
+   "zone": "1+2"
+  },
+  "kensal grn": {
+   "lat": 51.530539,
+   "lon": -0.225016,
+   "name": "Kensal Green",
+   "naptan": "940GZZLUKSL",
+   "zone": "2"
+  },
+  "kensal rise": {
+   "lat": 51.534554,
+   "lon": -0.219957,
+   "name": "Kensal Rise",
+   "naptan": "910GKENR",
+   "zone": "2"
+  },
+  "kensington olympia": {
+   "lat": 51.497624,
+   "lon": -0.210015,
+   "name": "Kensington (Olympia)",
+   "naptan": "940GZZLUKOY",
+   "zone": "2"
+  },
+  "kent house": {
+   "lat": 51.412215,
+   "lon": -0.045247,
+   "name": "Kent House Rail Station",
+   "naptan": "910GKENTHOS",
+   "zone": "4"
+  },
+  "kentish town": {
+   "lat": 51.550312,
+   "lon": -0.140733,
+   "name": "Kentish Town",
+   "naptan": "940GZZLUKSH",
+   "zone": "2"
+  },
+  "kentish town west": {
+   "lat": 51.546548,
+   "lon": -0.146655,
+   "name": "Kentish Town West",
+   "naptan": "910GKNTSHTW",
+   "zone": "2"
+  },
+  "kenton": {
+   "lat": 51.581756,
+   "lon": -0.31691,
+   "name": "Kenton",
+   "naptan": "940GZZLUKEN",
+   "zone": "4"
+  },
+  "kew gdns": {
+   "lat": 51.477058,
+   "lon": -0.285241,
+   "name": "Kew Gardens",
+   "naptan": "940GZZLUKWG",
+   "zone": "3+4"
+  },
+  "kilburn": {
+   "lat": 51.547183,
+   "lon": -0.204248,
+   "name": "Kilburn",
+   "naptan": "940GZZLUKBN",
+   "zone": "2"
+  },
+  "kilburn high rd": {
+   "lat": 51.537277,
+   "lon": -0.192237,
+   "name": "Kilburn High Road",
+   "naptan": "910GKLBRNHR",
+   "zone": "2"
+  },
+  "kilburn pk": {
+   "lat": 51.534979,
+   "lon": -0.194232,
+   "name": "Kilburn Park",
+   "naptan": "940GZZLUKPK",
+   "zone": "2"
+  },
+  "king george v": {
+   "lat": 51.502003,
+   "lon": 0.062624,
+   "name": "King George V",
+   "naptan": "940GZZDLKGV",
+   "zone": "3"
+  },
+  "king henrys drive": {
+   "lat": 51.34614,
+   "lon": -0.020849,
+   "name": "King Henry's Drive",
+   "naptan": "9400ZZCRKGH1",
+   "zone": null
+  },
+  "king henrys drive tram stop": {
+   "lat": 51.34508,
+   "lon": -0.01998,
+   "name": "King Henry's Drive Tram Stop",
+   "naptan": "940GZZCRKGH",
+   "zone": null
+  },
+  "kings cross": {
+   "lat": 51.531683,
+   "lon": -0.123538,
+   "name": "King's Cross & St Pancras International",
+   "naptan": "HUBKGX",
+   "zone": "1"
+  },
+  "kings cross st pancras": {
+   "lat": 51.530663,
+   "lon": -0.123194,
+   "name": "King's Cross St. Pancras",
+   "naptan": "940GZZLUKSX",
+   "zone": "1"
+  },
+  "kingsbury": {
+   "lat": 51.584845,
+   "lon": -0.27879,
+   "name": "Kingsbury",
+   "naptan": "940GZZLUKBY",
+   "zone": "4"
+  },
+  "knightsbridge": {
+   "lat": 51.501669,
+   "lon": -0.160508,
+   "name": "Knightsbridge",
+   "naptan": "940GZZLUKNB",
+   "zone": "1"
+  },
+  "ladbroke grove": {
+   "lat": 51.517449,
+   "lon": -0.210391,
+   "name": "Ladbroke Grove",
+   "naptan": "940GZZLULAD",
+   "zone": "2"
+  },
+  "lambeth north": {
+   "lat": 51.498808,
+   "lon": -0.112315,
+   "name": "Lambeth North",
+   "naptan": "940GZZLULBN",
+   "zone": "1"
+  },
+  "lancaster gate": {
+   "lat": 51.511723,
+   "lon": -0.175494,
+   "name": "Lancaster Gate",
+   "naptan": "940GZZLULGT",
+   "zone": "1"
+  },
+  "langdon pk": {
+   "lat": 51.515172,
+   "lon": -0.01415,
+   "name": "Langdon Park",
+   "naptan": "940GZZDLLDP",
+   "zone": "2"
+  },
+  "langley berks": {
+   "lat": 51.508062,
+   "lon": -0.541756,
+   "name": "Langley (Berks)",
+   "naptan": "910GLANGLEY",
+   "zone": null
+  },
+  "latimer rd": {
+   "lat": 51.513389,
+   "lon": -0.217799,
+   "name": "Latimer Road",
+   "naptan": "940GZZLULRD",
+   "zone": "2"
+  },
+  "lebanon rd": {
+   "lat": 51.375075,
+   "lon": -0.084418,
+   "name": "Lebanon Road",
+   "naptan": "9400ZZCRLEB1",
+   "zone": null
+  },
+  "lebanon rd tram stop": {
+   "lat": 51.375201,
+   "lon": -0.085002,
+   "name": "Lebanon Road Tram Stop",
+   "naptan": "940GZZCRLEB",
+   "zone": null
+  },
+  "leicester sq": {
+   "lat": 51.511386,
+   "lon": -0.128426,
+   "name": "Leicester Square",
+   "naptan": "940GZZLULSQ",
+   "zone": "1"
+  },
+  "lewisham": {
+   "lat": 51.464665,
+   "lon": -0.012874,
+   "name": "Lewisham",
+   "naptan": "940GZZDLLEW",
+   "zone": "2+3"
+  },
+  "leyton": {
+   "lat": 51.556589,
+   "lon": -0.005523,
+   "name": "Leyton",
+   "naptan": "940GZZLULYN",
+   "zone": "3"
+  },
+  "leyton midland rd": {
+   "lat": 51.569725,
+   "lon": -0.008051,
+   "name": "Leyton Midland Road",
+   "naptan": "910GLEYTNMR",
+   "zone": "3"
+  },
+  "leytonstone": {
+   "lat": 51.568324,
+   "lon": 0.008194,
+   "name": "Leytonstone",
+   "naptan": "940GZZLULYS",
+   "zone": "3+4"
+  },
+  "leytonstone high rd": {
+   "lat": 51.563554,
+   "lon": 0.008416,
+   "name": "Leytonstone High Road",
+   "naptan": "910GLYTNSHR",
+   "zone": "3"
+  },
+  "limehouse": {
+   "lat": 51.512393,
+   "lon": -0.039809,
+   "name": "Limehouse",
+   "naptan": "940GZZDLLIM",
+   "zone": "2"
+  },
+  "liverpool st": {
+   "lat": 51.517372,
+   "lon": -0.083182,
+   "name": "Liverpool Street",
+   "naptan": "940GZZLULVT",
+   "zone": "1"
+  },
+  "lloyd pk": {
+   "lat": 51.364193,
+   "lon": -0.082229,
+   "name": "Lloyd Park",
+   "naptan": "9400ZZCRLOY1",
+   "zone": null
+  },
+  "lloyd pk tram stop": {
+   "lat": 51.364278,
+   "lon": -0.080775,
+   "name": "Lloyd Park Tram Stop",
+   "naptan": "940GZZCRLOY",
+   "zone": null
+  },
+  "london br": {
+   "lat": 51.505721,
+   "lon": -0.088873,
+   "name": "London Bridge",
+   "naptan": "940GZZLULNB",
+   "zone": "1"
+  },
+  "london city airport": {
+   "lat": 51.503416,
+   "lon": 0.048739,
+   "name": "London City Airport",
+   "naptan": "940GZZDLLCA",
+   "zone": "3"
+  },
+  "london euston": {
+   "lat": 51.528136,
+   "lon": -0.133924,
+   "name": "London Euston",
+   "naptan": "910GEUSTON",
+   "zone": "1"
+  },
+  "london fields": {
+   "lat": 51.541153,
+   "lon": -0.057753,
+   "name": "London Fields",
+   "naptan": "910GLONFLDS",
+   "zone": "2"
+  },
+  "london liverpool st": {
+   "lat": 51.517991,
+   "lon": -0.081426,
+   "name": "London Liverpool Street",
+   "naptan": "910GLIVST",
+   "zone": "1"
+  },
+  "london paddington": {
+   "lat": 51.515996,
+   "lon": -0.176174,
+   "name": "London Paddington",
+   "naptan": "910GPADTON",
+   "zone": "NA"
+  },
+  "loughton": {
+   "lat": 51.641443,
+   "lon": 0.055476,
+   "name": "Loughton",
+   "naptan": "940GZZLULGN",
+   "zone": "6"
+  },
+  "maida vale": {
+   "lat": 51.529777,
+   "lon": -0.185758,
+   "name": "Maida Vale",
+   "naptan": "940GZZLUMVL",
+   "zone": "2"
+  },
+  "maidenhead": {
+   "lat": 51.518669,
+   "lon": -0.72266,
+   "name": "Maidenhead",
+   "naptan": "910GMDNHEAD",
+   "zone": null
+  },
+  "manor house": {
+   "lat": 51.570738,
+   "lon": -0.096118,
+   "name": "Manor House",
+   "naptan": "940GZZLUMRH",
+   "zone": "2+3"
+  },
+  "manor pk": {
+   "lat": 51.552477,
+   "lon": 0.046342,
+   "name": "Manor Park",
+   "naptan": "910GMANRPK",
+   "zone": "3+4"
+  },
+  "mansion house": {
+   "lat": 51.512117,
+   "lon": -0.094009,
+   "name": "Mansion House",
+   "naptan": "940GZZLUMSH",
+   "zone": "1"
+  },
+  "marble arch": {
+   "lat": 51.513424,
+   "lon": -0.158953,
+   "name": "Marble Arch",
+   "naptan": "940GZZLUMBA",
+   "zone": "1"
+  },
+  "maryland": {
+   "lat": 51.546081,
+   "lon": 0.005815,
+   "name": "Maryland",
+   "naptan": "910GMRYLAND",
+   "zone": "3"
+  },
+  "marylebone": {
+   "lat": 51.522322,
+   "lon": -0.163207,
+   "name": "Marylebone",
+   "naptan": "940GZZLUMYB",
+   "zone": "1"
+  },
+  "merton pk": {
+   "lat": 51.414797,
+   "lon": -0.201431,
+   "name": "Merton Park",
+   "naptan": "9400ZZCRMTP1",
+   "zone": null
+  },
+  "merton pk tram stop": {
+   "lat": 51.413589,
+   "lon": -0.201219,
+   "name": "Merton Park Tram Stop",
+   "naptan": "940GZZCRMTP",
+   "zone": null
+  },
+  "mile end": {
+   "lat": 51.525122,
+   "lon": -0.03364,
+   "name": "Mile End",
+   "naptan": "940GZZLUMED",
+   "zone": "2"
+  },
+  "mill hill east": {
+   "lat": 51.608229,
+   "lon": -0.209986,
+   "name": "Mill Hill East",
+   "naptan": "940GZZLUMHL",
+   "zone": "4"
+  },
+  "mitcham": {
+   "lat": 51.397787,
+   "lon": -0.172585,
+   "name": "Mitcham",
+   "naptan": "9400ZZCRMCH1",
+   "zone": null
+  },
+  "mitcham jn": {
+   "lat": 51.392859,
+   "lon": -0.158795,
+   "name": "Mitcham Junction",
+   "naptan": "9400ZZCRMJT1",
+   "zone": null
+  },
+  "mitcham jn tram stop": {
+   "lat": 51.392868,
+   "lon": -0.158263,
+   "name": "Mitcham Junction Tram Stop",
+   "naptan": "940GZZCRMJT",
+   "zone": null
+  },
+  "mitcham tram stop": {
+   "lat": 51.39749,
+   "lon": -0.1709,
+   "name": "Mitcham Tram Stop",
+   "naptan": "940GZZCRMCH",
+   "zone": null
+  },
+  "monument": {
+   "lat": 51.5107,
+   "lon": -0.085969,
+   "name": "Monument",
+   "naptan": "940GZZLUMMT",
+   "zone": "1"
+  },
+  "moor pk": {
+   "lat": 51.629845,
+   "lon": -0.432454,
+   "name": "Moor Park",
+   "naptan": "940GZZLUMPK",
+   "zone": "6+7"
+  },
+  "moorgate": {
+   "lat": 51.518176,
+   "lon": -0.088322,
+   "name": "Moorgate",
+   "naptan": "940GZZLUMGT",
+   "zone": "1"
+  },
+  "morden": {
+   "lat": 51.402142,
+   "lon": -0.194839,
+   "name": "Morden",
+   "naptan": "940GZZLUMDN",
+   "zone": "4"
+  },
+  "morden rd": {
+   "lat": 51.40905,
+   "lon": -0.192597,
+   "name": "Morden Road",
+   "naptan": "9400ZZCRMDN1",
+   "zone": null
+  },
+  "morden rd tram stop": {
+   "lat": 51.408874,
+   "lon": -0.192834,
+   "name": "Morden Road Tram Stop",
+   "naptan": "940GZZCRMDN",
+   "zone": null
+  },
+  "mornington crescent": {
+   "lat": 51.534679,
+   "lon": -0.138789,
+   "name": "Mornington Crescent",
+   "naptan": "940GZZLUMTC",
+   "zone": "2"
+  },
+  "mudchute": {
+   "lat": 51.490704,
+   "lon": -0.014738,
+   "name": "Mudchute",
+   "naptan": "940GZZDLMUD",
+   "zone": "2"
+  },
+  "neasden": {
+   "lat": 51.553986,
+   "lon": -0.249837,
+   "name": "Neasden",
+   "naptan": "940GZZLUNDN",
+   "zone": "3"
+  },
+  "new addington": {
+   "lat": 51.34313,
+   "lon": -0.017805,
+   "name": "New Addington",
+   "naptan": "9400ZZCRNWA1",
+   "zone": null
+  },
+  "new addington tram stop": {
+   "lat": 51.342593,
+   "lon": -0.017412,
+   "name": "New Addington Tram Stop",
+   "naptan": "940GZZCRNWA",
+   "zone": null
+  },
+  "new cross": {
+   "lat": 51.476347,
+   "lon": -0.032427,
+   "name": "New Cross",
+   "naptan": "HUBNWX",
+   "zone": null
+  },
+  "new cross ell": {
+   "lat": 51.476344,
+   "lon": -0.032441,
+   "name": "New Cross ELL",
+   "naptan": "910GNWCRELL",
+   "zone": "2"
+  },
+  "new cross gate": {
+   "lat": 51.475128,
+   "lon": -0.040399,
+   "name": "New Cross Gate",
+   "naptan": "910GNEWXGTE",
+   "zone": "2"
+  },
+  "newbury pk": {
+   "lat": 51.575726,
+   "lon": 0.090004,
+   "name": "Newbury Park",
+   "naptan": "940GZZLUNBP",
+   "zone": "4"
+  },
+  "nine elms": {
+   "lat": 51.479912,
+   "lon": -0.128476,
+   "name": "Nine Elms",
+   "naptan": "940GZZNEUGST",
+   "zone": "1"
+  },
+  "north acton": {
+   "lat": 51.523524,
+   "lon": -0.259755,
+   "name": "North Acton",
+   "naptan": "940GZZLUNAN",
+   "zone": "2+3"
+  },
+  "north ealing": {
+   "lat": 51.517505,
+   "lon": -0.288868,
+   "name": "North Ealing",
+   "naptan": "940GZZLUNEN",
+   "zone": "3"
+  },
+  "north greenwich": {
+   "lat": 51.50047,
+   "lon": 0.004287,
+   "name": "North Greenwich",
+   "naptan": "940GZZLUNGW",
+   "zone": "2/3"
+  },
+  "north harrow": {
+   "lat": 51.584872,
+   "lon": -0.362408,
+   "name": "North Harrow",
+   "naptan": "940GZZLUNHA",
+   "zone": "5"
+  },
+  "north wembley": {
+   "lat": 51.562551,
+   "lon": -0.304,
+   "name": "North Wembley",
+   "naptan": "940GZZLUNWY",
+   "zone": "4"
+  },
+  "northfields": {
+   "lat": 51.499319,
+   "lon": -0.314719,
+   "name": "Northfields",
+   "naptan": "940GZZLUNFD",
+   "zone": "3"
+  },
+  "northolt": {
+   "lat": 51.548236,
+   "lon": -0.368699,
+   "name": "Northolt",
+   "naptan": "940GZZLUNHT",
+   "zone": "5"
+  },
+  "northwick pk": {
+   "lat": 51.578481,
+   "lon": -0.318056,
+   "name": "Northwick Park",
+   "naptan": "940GZZLUNKP",
+   "zone": "4"
+  },
+  "northwood": {
+   "lat": 51.611053,
+   "lon": -0.423829,
+   "name": "Northwood",
+   "naptan": "940GZZLUNOW",
+   "zone": "6"
+  },
+  "northwood hills": {
+   "lat": 51.600572,
+   "lon": -0.409464,
+   "name": "Northwood Hills",
+   "naptan": "940GZZLUNWH",
+   "zone": "6"
+  },
+  "norwood jn": {
+   "lat": 51.397019,
+   "lon": -0.075221,
+   "name": "Norwood Junction",
+   "naptan": "910GNORWDJ",
+   "zone": "4"
+  },
+  "notting hill gate": {
+   "lat": 51.509128,
+   "lon": -0.196104,
+   "name": "Notting Hill Gate",
+   "naptan": "940GZZLUNHG",
+   "zone": "1+2"
+  },
+  "oakwood": {
+   "lat": 51.647726,
+   "lon": -0.132182,
+   "name": "Oakwood",
+   "naptan": "940GZZLUOAK",
+   "zone": "5"
+  },
+  "old st": {
+   "lat": 51.525864,
+   "lon": -0.08777,
+   "name": "Old Street",
+   "naptan": "940GZZLUODS",
+   "zone": "1"
+  },
+  "osterley": {
+   "lat": 51.481274,
+   "lon": -0.352224,
+   "name": "Osterley",
+   "naptan": "940GZZLUOSY",
+   "zone": "4"
+  },
+  "oval": {
+   "lat": 51.48185,
+   "lon": -0.112439,
+   "name": "Oval",
+   "naptan": "940GZZLUOVL",
+   "zone": "2"
+  },
+  "oxford circus": {
+   "lat": 51.515224,
+   "lon": -0.141903,
+   "name": "Oxford Circus",
+   "naptan": "940GZZLUOXC",
+   "zone": "1"
+  },
+  "paddington": {
+   "lat": 51.516581,
+   "lon": -0.175689,
+   "name": "Paddington",
+   "naptan": "940GZZLUPAC",
+   "zone": "1"
+  },
+  "paddington h and c line": {
+   "lat": 51.518187,
+   "lon": -0.178306,
+   "name": "Paddington (H&C Line)-Underground",
+   "naptan": "940GZZLUPAH",
+   "zone": "1"
+  },
+  "parsons grn": {
+   "lat": 51.475277,
+   "lon": -0.20117,
+   "name": "Parsons Green",
+   "naptan": "940GZZLUPSG",
+   "zone": "2"
+  },
+  "peckham rye": {
+   "lat": 51.470034,
+   "lon": -0.069414,
+   "name": "Peckham Rye",
+   "naptan": "910GPCKHMRY",
+   "zone": "2"
+  },
+  "penge east": {
+   "lat": 51.419334,
+   "lon": -0.05422,
+   "name": "Penge East Rail Station",
+   "naptan": "910GPNGEE",
+   "zone": "4"
+  },
+  "penge west": {
+   "lat": 51.417555,
+   "lon": -0.06084,
+   "name": "Penge West",
+   "naptan": "910GPENEW",
+   "zone": "4"
+  },
+  "perivale": {
+   "lat": 51.536717,
+   "lon": -0.323446,
+   "name": "Perivale",
+   "naptan": "940GZZLUPVL",
+   "zone": "4"
+  },
+  "phipps br": {
+   "lat": 51.403979,
+   "lon": -0.18164,
+   "name": "Phipps Bridge",
+   "naptan": "9400ZZCRPHI1",
+   "zone": null
+  },
+  "phipps br tram stop": {
+   "lat": 51.403979,
+   "lon": -0.18164,
+   "name": "Phipps Bridge Tram Stop",
+   "naptan": "940GZZCRPHI",
+   "zone": null
+  },
+  "piccadilly circus": {
+   "lat": 51.51005,
+   "lon": -0.133798,
+   "name": "Piccadilly Circus",
+   "naptan": "940GZZLUPCC",
+   "zone": "1"
+  },
+  "pimlico": {
+   "lat": 51.489097,
+   "lon": -0.133761,
+   "name": "Pimlico",
+   "naptan": "940GZZLUPCO",
+   "zone": "1"
+  },
+  "pinner": {
+   "lat": 51.592901,
+   "lon": -0.381161,
+   "name": "Pinner",
+   "naptan": "940GZZLUPNR",
+   "zone": "5"
+  },
+  "pk royal": {
+   "lat": 51.527123,
+   "lon": -0.284341,
+   "name": "Park Royal",
+   "naptan": "940GZZLUPKR",
+   "zone": "3"
+  },
+  "plaistow": {
+   "lat": 51.531341,
+   "lon": 0.017451,
+   "name": "Plaistow",
+   "naptan": "940GZZLUPLW",
+   "zone": "3"
+  },
+  "pontoon dock": {
+   "lat": 51.502212,
+   "lon": 0.032115,
+   "name": "Pontoon Dock",
+   "naptan": "940GZZDLPDK",
+   "zone": "3"
+  },
+  "poplar": {
+   "lat": 51.507744,
+   "lon": -0.017384,
+   "name": "Poplar",
+   "naptan": "940GZZDLPOP",
+   "zone": "2"
+  },
+  "preston rd": {
+   "lat": 51.571972,
+   "lon": -0.295107,
+   "name": "Preston Road",
+   "naptan": "940GZZLUPRD",
+   "zone": "4"
+  },
+  "prince regent": {
+   "lat": 51.509263,
+   "lon": 0.034158,
+   "name": "Prince Regent",
+   "naptan": "940GZZDLPRE",
+   "zone": "3"
+  },
+  "pudding mill lane": {
+   "lat": 51.534302,
+   "lon": -0.012755,
+   "name": "Pudding Mill Lane",
+   "naptan": "940GZZDLPUD",
+   "zone": "2/3"
+  },
+  "putney": {
+   "lat": 51.461303,
+   "lon": -0.216475,
+   "name": "Putney Rail Station",
+   "naptan": "910GPUTNEY",
+   "zone": "2+3"
+  },
+  "putney br": {
+   "lat": 51.468262,
+   "lon": -0.208731,
+   "name": "Putney Bridge",
+   "naptan": "940GZZLUPYB",
+   "zone": "2"
+  },
+  "queens pk": {
+   "lat": 51.534158,
+   "lon": -0.204574,
+   "name": "Queen's Park",
+   "naptan": "940GZZLUQPS",
+   "zone": "2"
+  },
+  "queens pk london": {
+   "lat": 51.533966,
+   "lon": -0.204985,
+   "name": "Queens Park (London)",
+   "naptan": "910GQPRK",
+   "zone": "2"
+  },
+  "queens rd peckham": {
+   "lat": 51.473566,
+   "lon": -0.057313,
+   "name": "Queens Road Peckham",
+   "naptan": "910GPCKHMQD",
+   "zone": "2"
+  },
+  "queensbury": {
+   "lat": 51.594188,
+   "lon": -0.286219,
+   "name": "Queensbury",
+   "naptan": "940GZZLUQBY",
+   "zone": "4"
+  },
+  "queenstown rd": {
+   "lat": 51.474968,
+   "lon": -0.146678,
+   "name": "Queenstown Road (Battersea) Rail Station",
+   "naptan": "910GQTRDBAT",
+   "zone": "2"
+  },
+  "queensway": {
+   "lat": 51.510312,
+   "lon": -0.187152,
+   "name": "Queensway",
+   "naptan": "940GZZLUQWY",
+   "zone": "1"
+  },
+  "ravenscourt pk": {
+   "lat": 51.494122,
+   "lon": -0.235881,
+   "name": "Ravenscourt Park",
+   "naptan": "940GZZLURVP",
+   "zone": "2"
+  },
+  "rayners lane": {
+   "lat": 51.575147,
+   "lon": -0.371127,
+   "name": "Rayners Lane",
+   "naptan": "940GZZLURYL",
+   "zone": "5"
+  },
+  "reading": {
+   "lat": 51.458786,
+   "lon": -0.971863,
+   "name": "Reading",
+   "naptan": "910GRDNGSTN",
+   "zone": null
+  },
+  "rectory rd": {
+   "lat": 51.558502,
+   "lon": -0.068267,
+   "name": "Rectory Road",
+   "naptan": "910GRCTRYRD",
+   "zone": "2"
+  },
+  "redbridge": {
+   "lat": 51.576243,
+   "lon": 0.04536,
+   "name": "Redbridge",
+   "naptan": "940GZZLURBG",
+   "zone": "4"
+  },
+  "reeves corner": {
+   "lat": 51.37527,
+   "lon": -0.10638,
+   "name": "Reeves Corner",
+   "naptan": "9400ZZCRRVC1",
+   "zone": null
+  },
+  "reeves corner tram stop": {
+   "lat": 51.375279,
+   "lon": -0.106408,
+   "name": "Reeves Corner Tram Stop",
+   "naptan": "940GZZCRRVC",
+   "zone": null
+  },
+  "regents pk": {
+   "lat": 51.523344,
+   "lon": -0.146444,
+   "name": "Regent's Park",
+   "naptan": "940GZZLURGP",
+   "zone": "1"
+  },
+  "richmond": {
+   "lat": 51.463237,
+   "lon": -0.301336,
+   "name": "Richmond",
+   "naptan": "940GZZLURMD",
+   "zone": "4"
+  },
+  "richmond london": {
+   "lat": 51.463061,
+   "lon": -0.301558,
+   "name": "Richmond (London)",
+   "naptan": "910GRICHMND",
+   "zone": "4"
+  },
+  "rickmansworth": {
+   "lat": 51.640207,
+   "lon": -0.473703,
+   "name": "Rickmansworth",
+   "naptan": "940GZZLURKW",
+   "zone": "7"
+  },
+  "roding valley": {
+   "lat": 51.617199,
+   "lon": 0.043647,
+   "name": "Roding Valley",
+   "naptan": "940GZZLURVY",
+   "zone": "4"
+  },
+  "romford": {
+   "lat": 51.574829,
+   "lon": 0.183237,
+   "name": "Romford",
+   "naptan": "910GROMFORD",
+   "zone": "6"
+  },
+  "rotherhithe": {
+   "lat": 51.500817,
+   "lon": -0.052048,
+   "name": "Rotherhithe",
+   "naptan": "910GRTHERHI",
+   "zone": "2"
+  },
+  "royal albert": {
+   "lat": 51.508357,
+   "lon": 0.045935,
+   "name": "Royal Albert",
+   "naptan": "940GZZDLRAL",
+   "zone": "3"
+  },
+  "royal oak": {
+   "lat": 51.519113,
+   "lon": -0.188748,
+   "name": "Royal Oak",
+   "naptan": "940GZZLURYO",
+   "zone": "2"
+  },
+  "royal victoria": {
+   "lat": 51.509336,
+   "lon": 0.018497,
+   "name": "Royal Victoria",
+   "naptan": "940GZZDLRVC",
+   "zone": "3"
+  },
+  "ruislip": {
+   "lat": 51.571354,
+   "lon": -0.421898,
+   "name": "Ruislip",
+   "naptan": "940GZZLURSP",
+   "zone": "6"
+  },
+  "ruislip gdns": {
+   "lat": 51.560736,
+   "lon": -0.41071,
+   "name": "Ruislip Gardens",
+   "naptan": "940GZZLURSG",
+   "zone": "5"
+  },
+  "ruislip manor": {
+   "lat": 51.573202,
+   "lon": -0.412973,
+   "name": "Ruislip Manor",
+   "naptan": "940GZZLURSM",
+   "zone": "6"
+  },
+  "russell sq": {
+   "lat": 51.523073,
+   "lon": -0.124285,
+   "name": "Russell Square",
+   "naptan": "940GZZLURSQ",
+   "zone": "1"
+  },
+  "sandilands": {
+   "lat": 51.375006,
+   "lon": -0.078027,
+   "name": "Sandilands",
+   "naptan": "9400ZZCRSAN1",
+   "zone": null
+  },
+  "sandilands tram stop": {
+   "lat": 51.375024,
+   "lon": -0.078041,
+   "name": "Sandilands Tram Stop",
+   "naptan": "940GZZCRSAN",
+   "zone": null
+  },
+  "seven kings": {
+   "lat": 51.564026,
+   "lon": 0.0971,
+   "name": "Seven Kings",
+   "naptan": "910GSVNKNGS",
+   "zone": "4"
+  },
+  "seven sisters": {
+   "lat": 51.58333,
+   "lon": -0.072584,
+   "name": "Seven Sisters",
+   "naptan": "940GZZLUSVS",
+   "zone": "3"
+  },
+  "shadwell": {
+   "lat": 51.511693,
+   "lon": -0.056643,
+   "name": "Shadwell",
+   "naptan": "940GZZDLSHA",
+   "zone": "2"
+  },
+  "shenfield": {
+   "lat": 51.630877,
+   "lon": 0.329851,
+   "name": "Shenfield",
+   "naptan": "910GSHENFLD",
+   "zone": null
+  },
+  "shepherds bush": {
+   "lat": 51.505285,
+   "lon": -0.217654,
+   "name": "Shepherds Bush",
+   "naptan": "910GSHPDSB",
+   "zone": "2"
+  },
+  "shepherds bush central": {
+   "lat": 51.504376,
+   "lon": -0.218813,
+   "name": "Shepherd's Bush (Central)",
+   "naptan": "940GZZLUSBC",
+   "zone": "2"
+  },
+  "shepherds bush market": {
+   "lat": 51.505579,
+   "lon": -0.226375,
+   "name": "Shepherd's Bush Market",
+   "naptan": "940GZZLUSBM",
+   "zone": "2"
+  },
+  "shoreditch high st": {
+   "lat": 51.523375,
+   "lon": -0.075246,
+   "name": "Shoreditch High Street",
+   "naptan": "910GSHRDHST",
+   "zone": "1"
+  },
+  "silver st": {
+   "lat": 51.614688,
+   "lon": -0.06724,
+   "name": "Silver Street",
+   "naptan": "910GSIVRST",
+   "zone": "4"
+  },
+  "sloane sq": {
+   "lat": 51.49227,
+   "lon": -0.156377,
+   "name": "Sloane Square",
+   "naptan": "940GZZLUSSQ",
+   "zone": "1"
+  },
+  "slough": {
+   "lat": 51.51188,
+   "lon": -0.59151,
+   "name": "Slough",
+   "naptan": "910GSLOUGH",
+   "zone": null
+  },
+  "snaresbrook": {
+   "lat": 51.580678,
+   "lon": 0.02144,
+   "name": "Snaresbrook",
+   "naptan": "940GZZLUSNB",
+   "zone": "4"
+  },
+  "south acton": {
+   "lat": 51.499695,
+   "lon": -0.270157,
+   "name": "South Acton",
+   "naptan": "910GSACTON",
+   "zone": "3"
+  },
+  "south ealing": {
+   "lat": 51.501003,
+   "lon": -0.307424,
+   "name": "South Ealing",
+   "naptan": "940GZZLUSEA",
+   "zone": "3"
+  },
+  "south hampstead": {
+   "lat": 51.541432,
+   "lon": -0.178878,
+   "name": "South Hampstead",
+   "naptan": "910GSHMPSTD",
+   "zone": "2"
+  },
+  "south harrow": {
+   "lat": 51.564888,
+   "lon": -0.352492,
+   "name": "South Harrow",
+   "naptan": "940GZZLUSHH",
+   "zone": "5"
+  },
+  "south kensington": {
+   "lat": 51.494094,
+   "lon": -0.174138,
+   "name": "South Kensington",
+   "naptan": "940GZZLUSKS",
+   "zone": "1"
+  },
+  "south kenton": {
+   "lat": 51.570232,
+   "lon": -0.308433,
+   "name": "South Kenton",
+   "naptan": "940GZZLUSKT",
+   "zone": "4"
+  },
+  "south quay": {
+   "lat": 51.50005,
+   "lon": -0.015975,
+   "name": "South Quay",
+   "naptan": "940GZZDLSOQ",
+   "zone": "2"
+  },
+  "south ruislip": {
+   "lat": 51.556853,
+   "lon": -0.398915,
+   "name": "South Ruislip",
+   "naptan": "940GZZLUSRP",
+   "zone": "5"
+  },
+  "south tottenham": {
+   "lat": 51.580372,
+   "lon": -0.072103,
+   "name": "South Tottenham",
+   "naptan": "910GSTOTNHM",
+   "zone": "3"
+  },
+  "south wimbledon": {
+   "lat": 51.415309,
+   "lon": -0.192005,
+   "name": "South Wimbledon",
+   "naptan": "940GZZLUSWN",
+   "zone": "3+4"
+  },
+  "south woodford": {
+   "lat": 51.591907,
+   "lon": 0.027338,
+   "name": "South Woodford",
+   "naptan": "940GZZLUSWF",
+   "zone": "4"
+  },
+  "southall": {
+   "lat": 51.505957,
+   "lon": -0.37861,
+   "name": "Southall",
+   "naptan": "910GSTHALL",
+   "zone": "4"
+  },
+  "southbury": {
+   "lat": 51.648705,
+   "lon": -0.052437,
+   "name": "Southbury",
+   "naptan": "910GSBURY",
+   "zone": "5"
+  },
+  "southend central": {
+   "lat": 51.537065,
+   "lon": 0.711727,
+   "name": "Southend Central Rail Station",
+   "naptan": "910GSTHCENT",
+   "zone": "NA"
+  },
+  "southend victoria": {
+   "lat": 51.541513,
+   "lon": 0.711501,
+   "name": "Southend Victoria Rail Station",
+   "naptan": "910GSTHVIC",
+   "zone": "NA"
+  },
+  "southfields": {
+   "lat": 51.445073,
+   "lon": -0.206602,
+   "name": "Southfields",
+   "naptan": "940GZZLUSFS",
+   "zone": "3"
+  },
+  "southgate": {
+   "lat": 51.632315,
+   "lon": -0.127816,
+   "name": "Southgate",
+   "naptan": "940GZZLUSGT",
+   "zone": "4"
+  },
+  "southwark": {
+   "lat": 51.50427,
+   "lon": -0.105331,
+   "name": "Southwark",
+   "naptan": "940GZZLUSWK",
+   "zone": "1"
+  },
+  "st james st london": {
+   "lat": 51.580981,
+   "lon": -0.032918,
+   "name": "St James Street (London)",
+   "naptan": "910GSTJMSST",
+   "zone": "3"
+  },
+  "st jamess pk": {
+   "lat": 51.499544,
+   "lon": -0.133608,
+   "name": "St. James's Park",
+   "naptan": "940GZZLUSJP",
+   "zone": "1"
+  },
+  "st johns wood": {
+   "lat": 51.534521,
+   "lon": -0.173948,
+   "name": "St. John's Wood",
+   "naptan": "940GZZLUSJW",
+   "zone": "2"
+  },
+  "st pancras": {
+   "lat": 51.531683,
+   "lon": -0.123538,
+   "name": "King's Cross & St Pancras International",
+   "naptan": "HUBKGX",
+   "zone": "1"
+  },
+  "st pauls": {
+   "lat": 51.514936,
+   "lon": -0.097567,
+   "name": "St. Paul's",
+   "naptan": "940GZZLUSPU",
+   "zone": "1"
+  },
+  "stamford brook": {
+   "lat": 51.494917,
+   "lon": -0.245704,
+   "name": "Stamford Brook",
+   "naptan": "940GZZLUSFB",
+   "zone": "2"
+  },
+  "stamford hill": {
+   "lat": 51.574467,
+   "lon": -0.076682,
+   "name": "Stamford Hill",
+   "naptan": "910GSTMFDHL",
+   "zone": "3"
+  },
+  "stanmore": {
+   "lat": 51.619839,
+   "lon": -0.303266,
+   "name": "Stanmore",
+   "naptan": "940GZZLUSTM",
+   "zone": "5"
+  },
+  "star lane": {
+   "lat": 51.520786,
+   "lon": 0.004156,
+   "name": "Star Lane",
+   "naptan": "940GZZDLSTL",
+   "zone": "2/3"
+  },
+  "stepney grn": {
+   "lat": 51.521858,
+   "lon": -0.046596,
+   "name": "Stepney Green",
+   "naptan": "940GZZLUSGN",
+   "zone": "2"
+  },
+  "stevenage": {
+   "lat": 51.901688,
+   "lon": -0.207109,
+   "name": "Stevenage Rail Station",
+   "naptan": "910GSTEVNGE",
+   "zone": "NA"
+  },
+  "stockwell": {
+   "lat": 51.472184,
+   "lon": -0.122644,
+   "name": "Stockwell",
+   "naptan": "940GZZLUSKW",
+   "zone": "2"
+  },
+  "stoke newington": {
+   "lat": 51.565233,
+   "lon": -0.072887,
+   "name": "Stoke Newington",
+   "naptan": "910GSTKNWNG",
+   "zone": "2"
+  },
+  "stonebridge pk": {
+   "lat": 51.543959,
+   "lon": -0.275892,
+   "name": "Stonebridge Park",
+   "naptan": "940GZZLUSGP",
+   "zone": "3"
+  },
+  "stratford": {
+   "lat": 51.541806,
+   "lon": -0.003458,
+   "name": "Stratford",
+   "naptan": "940GZZLUSTD",
+   "zone": "2/3"
+  },
+  "stratford high st": {
+   "lat": 51.538196,
+   "lon": -0.001078,
+   "name": "Stratford High Street",
+   "naptan": "940GZZDLSHS",
+   "zone": "2/3"
+  },
+  "stratford london": {
+   "lat": 51.541895,
+   "lon": -0.003397,
+   "name": "Stratford (London)",
+   "naptan": "910GSTFD",
+   "zone": "2/3"
+  },
+  "sudbury hill": {
+   "lat": 51.556946,
+   "lon": -0.336435,
+   "name": "Sudbury Hill",
+   "naptan": "940GZZLUSUH",
+   "zone": "4"
+  },
+  "sudbury hill harrow": {
+   "lat": 51.558465,
+   "lon": -0.335803,
+   "name": "Sudbury Hill Harrow Rail Station",
+   "naptan": "910GSDBRYHH",
+   "zone": "4"
+  },
+  "sudbury town": {
+   "lat": 51.550815,
+   "lon": -0.315745,
+   "name": "Sudbury Town",
+   "naptan": "940GZZLUSUT",
+   "zone": "4"
+  },
+  "surrey quays": {
+   "lat": 51.493196,
+   "lon": -0.047519,
+   "name": "Surrey Quays",
+   "naptan": "910GSURREYQ",
+   "zone": "2"
+  },
+  "swiss cottage": {
+   "lat": 51.543681,
+   "lon": -0.174894,
+   "name": "Swiss Cottage",
+   "naptan": "940GZZLUSWC",
+   "zone": "2"
+  },
+  "sydenham": {
+   "lat": 51.427248,
+   "lon": -0.054244,
+   "name": "Sydenham",
+   "naptan": "910GSYDENHM",
+   "zone": "3"
+  },
+  "taplow": {
+   "lat": 51.523562,
+   "lon": -0.68137,
+   "name": "Taplow",
+   "naptan": "910GTAPLOW",
+   "zone": null
+  },
+  "temple": {
+   "lat": 51.511006,
+   "lon": -0.11426,
+   "name": "Temple",
+   "naptan": "940GZZLUTMP",
+   "zone": "1"
+  },
+  "theobalds grove": {
+   "lat": 51.692457,
+   "lon": -0.034831,
+   "name": "Theobalds Grove",
+   "naptan": "910GTHBLDSG",
+   "zone": "7"
+  },
+  "therapia lane": {
+   "lat": 51.385296,
+   "lon": -0.128702,
+   "name": "Therapia Lane",
+   "naptan": "9400ZZCRTPA1",
+   "zone": null
+  },
+  "therapia lane tram stop": {
+   "lat": 51.385697,
+   "lon": -0.129045,
+   "name": "Therapia Lane Tram Stop",
+   "naptan": "940GZZCRTPA",
+   "zone": null
+  },
+  "theydon bois": {
+   "lat": 51.671759,
+   "lon": 0.103085,
+   "name": "Theydon Bois",
+   "naptan": "940GZZLUTHB",
+   "zone": "6"
+  },
+  "tooting bec": {
+   "lat": 51.435678,
+   "lon": -0.159736,
+   "name": "Tooting Bec",
+   "naptan": "940GZZLUTBC",
+   "zone": "3"
+  },
+  "tooting broadway": {
+   "lat": 51.42763,
+   "lon": -0.168374,
+   "name": "Tooting Broadway",
+   "naptan": "940GZZLUTBY",
+   "zone": "3"
+  },
+  "tottenham ct rd": {
+   "lat": 51.516426,
+   "lon": -0.13041,
+   "name": "Tottenham Court Road",
+   "naptan": "940GZZLUTCR",
+   "zone": "1"
+  },
+  "tottenham hale": {
+   "lat": 51.588108,
+   "lon": -0.060241,
+   "name": "Tottenham Hale",
+   "naptan": "940GZZLUTMH",
+   "zone": "3"
+  },
+  "totteridge and whetstone": {
+   "lat": 51.630597,
+   "lon": -0.17921,
+   "name": "Totteridge & Whetstone",
+   "naptan": "940GZZLUTAW",
+   "zone": "4"
+  },
+  "tower gateway": {
+   "lat": 51.510617,
+   "lon": -0.074818,
+   "name": "Tower Gateway",
+   "naptan": "940GZZDLTWG",
+   "zone": "1"
+  },
+  "tower hill": {
+   "lat": 51.509971,
+   "lon": -0.076546,
+   "name": "Tower Hill",
+   "naptan": "940GZZLUTWH",
+   "zone": "1"
+  },
+  "tufnell pk": {
+   "lat": 51.556822,
+   "lon": -0.138433,
+   "name": "Tufnell Park",
+   "naptan": "940GZZLUTFP",
+   "zone": "2"
+  },
+  "turkey st": {
+   "lat": 51.672628,
+   "lon": -0.047217,
+   "name": "Turkey Street",
+   "naptan": "910GTURKYST",
+   "zone": "6"
+  },
+  "turnham grn": {
+   "lat": 51.495148,
+   "lon": -0.254555,
+   "name": "Turnham Green",
+   "naptan": "940GZZLUTNG",
+   "zone": "2+3"
+  },
+  "turnpike lane": {
+   "lat": 51.590272,
+   "lon": -0.102953,
+   "name": "Turnpike Lane",
+   "naptan": "940GZZLUTPN",
+   "zone": "3"
+  },
+  "twyford": {
+   "lat": 51.475534,
+   "lon": -0.863293,
+   "name": "Twyford",
+   "naptan": "910GTWYFORD",
+   "zone": null
+  },
+  "upminster": {
+   "lat": 51.559063,
+   "lon": 0.250882,
+   "name": "Upminster",
+   "naptan": "940GZZLUUPM",
+   "zone": "6"
+  },
+  "upminster br": {
+   "lat": 51.55856,
+   "lon": 0.235809,
+   "name": "Upminster Bridge",
+   "naptan": "940GZZLUUPB",
+   "zone": "6"
+  },
+  "upney": {
+   "lat": 51.538372,
+   "lon": 0.10153,
+   "name": "Upney",
+   "naptan": "940GZZLUUPY",
+   "zone": "4"
+  },
+  "upper holloway": {
+   "lat": 51.563631,
+   "lon": -0.129513,
+   "name": "Upper Holloway",
+   "naptan": "910GUPRHLWY",
+   "zone": "2"
+  },
+  "upper warlingham": {
+   "lat": 51.308512,
+   "lon": -0.077952,
+   "name": "Upper Warlingham Rail Station",
+   "naptan": "910GUWRLNGH",
+   "zone": "6"
+  },
+  "upton pk": {
+   "lat": 51.53534,
+   "lon": 0.035263,
+   "name": "Upton Park",
+   "naptan": "940GZZLUUPK",
+   "zone": "3"
+  },
+  "uxbridge": {
+   "lat": 51.546565,
+   "lon": -0.477949,
+   "name": "Uxbridge",
+   "naptan": "940GZZLUUXB",
+   "zone": "6"
+  },
+  "vauxhall": {
+   "lat": 51.485743,
+   "lon": -0.124204,
+   "name": "Vauxhall",
+   "naptan": "940GZZLUVXL",
+   "zone": "1+2"
+  },
+  "victoria": {
+   "lat": 51.496359,
+   "lon": -0.143102,
+   "name": "Victoria",
+   "naptan": "940GZZLUVIC",
+   "zone": "1"
+  },
+  "waddon marsh": {
+   "lat": 51.37711,
+   "lon": -0.117886,
+   "name": "Waddon Marsh",
+   "naptan": "9400ZZCRWAD1",
+   "zone": null
+  },
+  "waddon marsh tram stop": {
+   "lat": 51.377076,
+   "lon": -0.118016,
+   "name": "Waddon Marsh Tram Stop",
+   "naptan": "940GZZCRWAD",
+   "zone": null
+  },
+  "walthamstow central": {
+   "lat": 51.582965,
+   "lon": -0.019885,
+   "name": "Walthamstow Central",
+   "naptan": "940GZZLUWWL",
+   "zone": "3"
+  },
+  "walthamstow queens rd": {
+   "lat": 51.581503,
+   "lon": -0.023846,
+   "name": "Walthamstow Queens Road",
+   "naptan": "910GWLTHQRD",
+   "zone": "3"
+  },
+  "wandle pk": {
+   "lat": 51.373022,
+   "lon": -0.113082,
+   "name": "Wandle Park",
+   "naptan": "9400ZZCRWAN1",
+   "zone": null
+  },
+  "wandle pk tram stop": {
+   "lat": 51.373403,
+   "lon": -0.113282,
+   "name": "Wandle Park Tram Stop",
+   "naptan": "940GZZCRWAN",
+   "zone": null
+  },
+  "wandsworth rd": {
+   "lat": 51.470216,
+   "lon": -0.13852,
+   "name": "Wandsworth Road",
+   "naptan": "910GWNDSWRD",
+   "zone": "2"
+  },
+  "wanstead": {
+   "lat": 51.575501,
+   "lon": 0.028527,
+   "name": "Wanstead",
+   "naptan": "940GZZLUWSD",
+   "zone": "4"
+  },
+  "wanstead pk": {
+   "lat": 51.551693,
+   "lon": 0.026213,
+   "name": "Wanstead Park",
+   "naptan": "910GWNSTDPK",
+   "zone": "3"
+  },
+  "wapping": {
+   "lat": 51.504388,
+   "lon": -0.055931,
+   "name": "Wapping",
+   "naptan": "910GWAPPING",
+   "zone": "2"
+  },
+  "warren st": {
+   "lat": 51.524951,
+   "lon": -0.138321,
+   "name": "Warren Street",
+   "naptan": "940GZZLUWRR",
+   "zone": "1"
+  },
+  "warwick avenue": {
+   "lat": 51.523263,
+   "lon": -0.183783,
+   "name": "Warwick Avenue",
+   "naptan": "940GZZLUWKA",
+   "zone": "2"
+  },
+  "waterloo": {
+   "lat": 51.503299,
+   "lon": -0.11478,
+   "name": "Waterloo",
+   "naptan": "940GZZLUWLO",
+   "zone": "1"
+  },
+  "waterloo east": {
+   "lat": 51.504076,
+   "lon": -0.108898,
+   "name": "London Waterloo East Rail Station",
+   "naptan": "910GWLOE",
+   "zone": "1"
+  },
+  "watford": {
+   "lat": 51.657446,
+   "lon": -0.417377,
+   "name": "Watford",
+   "naptan": "940GZZLUWAF",
+   "zone": "7"
+  },
+  "watford high st": {
+   "lat": 51.652655,
+   "lon": -0.391711,
+   "name": "Watford High Street",
+   "naptan": "910GWATFDHS",
+   "zone": "8"
+  },
+  "watford jn": {
+   "lat": 51.663529,
+   "lon": -0.396517,
+   "name": "Watford Junction",
+   "naptan": "910GWATFJDC",
+   "zone": null
+  },
+  "wellesley rd": {
+   "lat": 51.375369,
+   "lon": -0.097539,
+   "name": "Wellesley Road",
+   "naptan": "9400ZZCRWEL1",
+   "zone": null
+  },
+  "wellesley rd tram stop": {
+   "lat": 51.37537,
+   "lon": -0.097554,
+   "name": "Wellesley Road Tram Stop",
+   "naptan": "940GZZCRWEL",
+   "zone": null
+  },
+  "welwyn garden city": {
+   "lat": 51.801048,
+   "lon": -0.20407,
+   "name": "Welwyn Garden City Rail Station",
+   "naptan": "910GWLWYNGC",
+   "zone": null
+  },
+  "wembley central": {
+   "lat": 51.552304,
+   "lon": -0.296852,
+   "name": "Wembley Central",
+   "naptan": "940GZZLUWYC",
+   "zone": "4"
+  },
+  "wembley pk": {
+   "lat": 51.563198,
+   "lon": -0.279262,
+   "name": "Wembley Park",
+   "naptan": "940GZZLUWYP",
+   "zone": "4"
+  },
+  "west acton": {
+   "lat": 51.518001,
+   "lon": -0.28098,
+   "name": "West Acton",
+   "naptan": "940GZZLUWTA",
+   "zone": "3"
+  },
+  "west brompton": {
+   "lat": 51.487268,
+   "lon": -0.195599,
+   "name": "West Brompton",
+   "naptan": "940GZZLUWBN",
+   "zone": "2"
+  },
+  "west croydon": {
+   "lat": 51.378428,
+   "lon": -0.102585,
+   "name": "West Croydon",
+   "naptan": "910GWCROYDN",
+   "zone": "5"
+  },
+  "west croydon tram stop": {
+   "lat": 51.378971,
+   "lon": -0.101701,
+   "name": "West Croydon Tram Stop",
+   "naptan": "940GZZCRWCR",
+   "zone": null
+  },
+  "west drayton": {
+   "lat": 51.510055,
+   "lon": -0.472234,
+   "name": "West Drayton",
+   "naptan": "910GWDRYTON",
+   "zone": "6"
+  },
+  "west ealing": {
+   "lat": 51.513506,
+   "lon": -0.320133,
+   "name": "West Ealing",
+   "naptan": "910GWEALING",
+   "zone": "3"
+  },
+  "west finchley": {
+   "lat": 51.609426,
+   "lon": -0.188362,
+   "name": "West Finchley",
+   "naptan": "940GZZLUWFN",
+   "zone": "4"
+  },
+  "west ham": {
+   "lat": 51.528136,
+   "lon": 0.005055,
+   "name": "West Ham",
+   "naptan": "940GZZLUWHM",
+   "zone": "2/3"
+  },
+  "west hampstead": {
+   "lat": 51.546638,
+   "lon": -0.191059,
+   "name": "West Hampstead",
+   "naptan": "940GZZLUWHP",
+   "zone": "2"
+  },
+  "west hampstead nll": {
+   "lat": 51.547468,
+   "lon": -0.191185,
+   "name": "West Hampstead (North London Line)",
+   "naptan": "910GWHMDSTD",
+   "zone": "2"
+  },
+  "west hampstead thameslink": {
+   "lat": 51.548476,
+   "lon": -0.191837,
+   "name": "West Hampstead Thameslink Rail Station",
+   "naptan": "910GWHMPSTM",
+   "zone": "2"
+  },
+  "west harrow": {
+   "lat": 51.57971,
+   "lon": -0.3534,
+   "name": "West Harrow",
+   "naptan": "940GZZLUWHW",
+   "zone": "5"
+  },
+  "west india quay": {
+   "lat": 51.50703,
+   "lon": -0.020311,
+   "name": "West India Quay",
+   "naptan": "940GZZDLWIQ",
+   "zone": "2"
+  },
+  "west kensington": {
+   "lat": 51.490459,
+   "lon": -0.206636,
+   "name": "West Kensington",
+   "naptan": "940GZZLUWKN",
+   "zone": "2"
+  },
+  "west ruislip": {
+   "lat": 51.569688,
+   "lon": -0.437886,
+   "name": "West Ruislip",
+   "naptan": "940GZZLUWRP",
+   "zone": "6"
+  },
+  "west silvertown": {
+   "lat": 51.502838,
+   "lon": 0.02246,
+   "name": "West Silvertown",
+   "naptan": "940GZZDLWSV",
+   "zone": "3"
+  },
+  "westbourne pk": {
+   "lat": 51.52111,
+   "lon": -0.201065,
+   "name": "Westbourne Park",
+   "naptan": "940GZZLUWSP",
+   "zone": "2"
+  },
+  "westferry": {
+   "lat": 51.509431,
+   "lon": -0.02675,
+   "name": "Westferry",
+   "naptan": "940GZZDLWFE",
+   "zone": "2"
+  },
+  "westminster": {
+   "lat": 51.50132,
+   "lon": -0.124861,
+   "name": "Westminster",
+   "naptan": "940GZZLUWSM",
+   "zone": "1"
+  },
+  "white city": {
+   "lat": 51.511959,
+   "lon": -0.224297,
+   "name": "White City",
+   "naptan": "940GZZLUWCY",
+   "zone": "2"
+  },
+  "white hart lane": {
+   "lat": 51.605037,
+   "lon": -0.070914,
+   "name": "White Hart Lane",
+   "naptan": "910GWHHRTLA",
+   "zone": "3"
+  },
+  "whitechapel": {
+   "lat": 51.519518,
+   "lon": -0.059971,
+   "name": "Whitechapel",
+   "naptan": "940GZZLUWPL",
+   "zone": "2"
+  },
+  "whyteleafe": {
+   "lat": 51.309958,
+   "lon": -0.081148,
+   "name": "Whyteleafe Rail Station",
+   "naptan": "910GWHYTELF",
+   "zone": "6"
+  },
+  "willesden grn": {
+   "lat": 51.549146,
+   "lon": -0.221537,
+   "name": "Willesden Green",
+   "naptan": "940GZZLUWIG",
+   "zone": "2+3"
+  },
+  "willesden jn": {
+   "lat": 51.532259,
+   "lon": -0.244283,
+   "name": "Willesden Junction",
+   "naptan": "940GZZLUWJN",
+   "zone": "2+3"
+  },
+  "wimbledon": {
+   "lat": 51.421207,
+   "lon": -0.206573,
+   "name": "Wimbledon",
+   "naptan": "940GZZLUWIM",
+   "zone": "3"
+  },
+  "wimbledon pk": {
+   "lat": 51.434573,
+   "lon": -0.199719,
+   "name": "Wimbledon Park",
+   "naptan": "940GZZLUWIP",
+   "zone": "3"
+  },
+  "wimbledon tram stop": {
+   "lat": 51.421051,
+   "lon": -0.205816,
+   "name": "Wimbledon Tram Stop",
+   "naptan": "940GZZCRWMB",
+   "zone": "3"
+  },
+  "windsor and eton central": {
+   "lat": 51.483268,
+   "lon": -0.61038,
+   "name": "Windsor & Eton Central Rail Station",
+   "naptan": "910GWINDSEC",
+   "zone": null
+  },
+  "windsor and eton riverside": {
+   "lat": 51.48565,
+   "lon": -0.606534,
+   "name": "Windsor & Eton Riverside Rail Station",
+   "naptan": "910GWSORAER",
+   "zone": "NA"
+  },
+  "wood grn": {
+   "lat": 51.597479,
+   "lon": -0.109886,
+   "name": "Wood Green",
+   "naptan": "940GZZLUWOG",
+   "zone": "3"
+  },
+  "wood lane": {
+   "lat": 51.509669,
+   "lon": -0.22453,
+   "name": "Wood Lane",
+   "naptan": "940GZZLUWLA",
+   "zone": "2"
+  },
+  "wood st": {
+   "lat": 51.58658,
+   "lon": -0.002405,
+   "name": "Wood Street",
+   "naptan": "910GWDST",
+   "zone": "4"
+  },
+  "woodford": {
+   "lat": 51.606899,
+   "lon": 0.03397,
+   "name": "Woodford",
+   "naptan": "940GZZLUWOF",
+   "zone": "4"
+  },
+  "woodgrange pk": {
+   "lat": 51.549264,
+   "lon": 0.044423,
+   "name": "Woodgrange Park",
+   "naptan": "910GWDGRNPK",
+   "zone": "3+4"
+  },
+  "woodside": {
+   "lat": 51.38732,
+   "lon": -0.064576,
+   "name": "Woodside",
+   "naptan": "9400ZZCRWOD1",
+   "zone": null
+  },
+  "woodside pk": {
+   "lat": 51.618014,
+   "lon": -0.18542,
+   "name": "Woodside Park",
+   "naptan": "940GZZLUWOP",
+   "zone": "4"
+  },
+  "woodside tram stop": {
+   "lat": 51.3871,
+   "lon": -0.065361,
+   "name": "Woodside Tram Stop",
+   "naptan": "940GZZCRWOD",
+   "zone": null
+  },
+  "woolwich": {
+   "lat": 51.492168,
+   "lon": 0.070593,
+   "name": "Woolwich",
+   "naptan": "910GWOLWXR",
+   "zone": "4"
+  },
+  "woolwich arsenal": {
+   "lat": 51.490009,
+   "lon": 0.069127,
+   "name": "Woolwich Arsenal",
+   "naptan": "940GZZDLWLA",
+   "zone": "4"
+  }
+ },
+ "zone_fares": {
+  "1-1": {
+   "off_peak": 300,
+   "peak": 310
+  },
+  "1-2": {
+   "off_peak": 310,
+   "peak": 360
+  },
+  "1-3": {
+   "off_peak": 330,
+   "peak": 390
+  },
+  "1-4": {
+   "off_peak": 360,
+   "peak": 480
+  },
+  "1-5": {
+   "off_peak": 380,
+   "peak": 530
+  },
+  "1-6": {
+   "off_peak": 400,
+   "peak": 590
+  },
+  "1-7": {
+   "off_peak": 520,
+   "peak": 710
+  },
+  "1-8": {
+   "off_peak": 520,
+   "peak": 870
+  },
+  "1-9": {
+   "off_peak": 530,
+   "peak": 880
+  },
+  "2-2": {
+   "off_peak": 220,
+   "peak": 230
+  },
+  "2-3": {
+   "off_peak": 230,
+   "peak": 250
+  },
+  "2-5": {
+   "off_peak": 250,
+   "peak": 340
+  },
+  "3-3": {
+   "off_peak": 220,
+   "peak": 230
+  },
+  "3-4": {
+   "off_peak": 230,
+   "peak": 250
+  },
+  "3-5": {
+   "off_peak": 240,
+   "peak": 320
+  },
+  "3-7": {
+   "off_peak": 250,
+   "peak": 420
+  },
+  "3-8": {
+   "off_peak": 250,
+   "peak": 510
+  },
+  "3-9": {
+   "off_peak": 250,
+   "peak": 530
+  },
+  "4-6": {
+   "off_peak": 240,
+   "peak": 320
+  },
+  "4-7": {
+   "off_peak": 240,
+   "peak": 340
+  },
+  "4-8": {
+   "off_peak": 240,
+   "peak": 420
+  },
+  "4-9": {
+   "off_peak": 240,
+   "peak": 430
+  },
+  "7-8": {
+   "off_peak": 210,
+   "peak": 230
+  },
+  "7-9": {
+   "off_peak": 220,
+   "peak": 240
+  },
+  "8-9": {
+   "off_peak": 210,
+   "peak": 230
+  }
+ }
+}
