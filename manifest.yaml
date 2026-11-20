@@ -138,6 +138,7 @@ outcomes:
           step-free network, so the reply can say so.
       - name: options
         type: array
+        item_type: string
         description: >-
           Each way of making the journey as one readable line — the lines
           used, journey time, fare in pounds, and "disrupted" where one of
@@ -165,6 +166,7 @@ outcomes:
         description: The journey time of the quickest option, in whole minutes.
       - name: disrupted_lines
         type: array
+        item_type: string
         description: >-
           The lines on this journey reporting anything worse than a good
           service right now. Empty when everything on the route is running.
